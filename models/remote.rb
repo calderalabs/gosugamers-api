@@ -14,13 +14,13 @@ class RemoteModel
     end
   end
 
-  def self.find_from_site(site, args = nil)
-    query = args.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join('&') if args
+  def self.find_from_site(site, args = {})
+    query = args.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join('&') unless args.empty?
     contents  = open([site, query].compact.join('?')) { |f| f.read }
     extract_from_contents(contents)
   end
   
-  def self.find(args = nil)
+  def self.find(args = {})
     find_from_site(site, args)
   end
   

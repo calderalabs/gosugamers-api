@@ -1,5 +1,5 @@
 require 'rspec/core/rake_task'
 
-RSpec::Core::RakeTask.new do |spec|
+RSpec::Core::RakeTask.new(:spec => :environment) do |spec|
   spec.pattern = 'spec/**/*_spec.rb'
 end
