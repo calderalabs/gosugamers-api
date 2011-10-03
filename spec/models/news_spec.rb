@@ -3,8 +3,8 @@ require 'models/news'
 
 describe News do
   before(:each) do
-    News.site = 'http://www.example.com'
-    stub_request(:get, 'http://www.example.com/dota/news/archive').
+    News.site = 'http://www.example.com/:game/news'
+    stub_request(:get, 'http://www.example.com/dota/news').
     to_return(:body => open(File.join(File.dirname(__FILE__), 'data', 'news.html')) { |f| f.read })
   end
   
@@ -21,16 +21,6 @@ describe News do
   it 'should initialize its comment count' do
     n = News.new(:comment_count => 23)
     n.comment_count.should == 23
-  end
-  
-  it 'should append the game name to the site' do
-    News.should_receive(:find_from_site).with('http://www.example.com/dota/news/archive', {})
-    News.find(:game => 'dota')
-  end
-  
-  it 'should use general site if no game is specified' do
-    News.should_receive(:find_from_site).with('http://www.example.com/general/news/archive', {})
-    News.find
   end
   
   it 'should extract an array with the same fields from the sample html page' do
