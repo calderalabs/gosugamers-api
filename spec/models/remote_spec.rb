@@ -40,10 +40,30 @@ describe RemoteModel do
   it "should map an argument value before finding" do
     model = test_model {
       self.site = 'http://www.example.com'
-      map_argument :arg do |a| a * 2 end
+      map_argument(:arg) { |a| a * 2 }
     }
       
     model.find(:arg => 4)
     should have_requested(:get, 'http://www.example.com').with(:query => { 'arg' => '8' })
+  end
+  
+  it "should replace an argument with the new name and value before finding" do
+    model = test_model {
+      self.site = 'http://www.example.com'
+      replace_argument(:arg, :reparg) { |a| a + ' replaced' }
+    }
+    
+    model.find(:arg => 'example')
+    should have_requested(:get, 'http://www.example.com').with(:query => { 'reparg' => 'example replaced' })
+  end
+  
+  it "should use the default value when the argument is not passed" do
+    model = test_model {
+      self.site = 'http://www.example.com'
+      default_argument(:arg, 'default')
+    }
+    
+    model.find
+    should have_requested(:get, 'http://www.example.com').with(:query => { 'arg' => 'default' })
   end
 end

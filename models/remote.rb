@@ -21,13 +21,17 @@ class RemoteModel
       @mapped_arguments ||= {}
     end
 
+    def default_arguments
+      @default_arguments ||= {}
+    end
+
     def fields
       @fields ||= {}
     end
   end
 
   def self.host
-    URI.split(site).values_at(0, 2).join('://')
+    URI.split(site).values_at(0, 2).join('://') if site
   end
 
   def self.field(field, type)
@@ -39,7 +43,10 @@ class RemoteModel
       end
       
       def #{field}=(val)
-        raise AttributeTypeMismatch, "\#{val.class.name} \#{val} cannot be assigned to \#{self.class.field_type(:#{field}).name} field #{field}" unless val.is_a?(self.class.field_type(:#{field}))
+        raise AttributeTypeMismatch,
+          "\#{val.class.name} \#{val} cannot be assigned to " +
+          "\#{self.class.field_type(:#{field}).name} field #{field}" unless val.is_a?(self.class.field_type(:#{field}))
+          
         @#{field} = val
       end
     EOT
@@ -63,15 +70,17 @@ class RemoteModel
   end
 
   def self.replace_argument(argument, new_name, &block)
+    map_argument(argument, &block)
     rename_argument(argument, new_name)
-    map_argument(argument) { block }
   end
 
   def self.default_argument(argument, val)
-    map_argument(argument) { |a| a || val }
+    default_arguments[argument.to_sym] = val
   end
 
   def self.find(args = {})
+    args = default_arguments.merge(args)
+    
     args.dup.each do |k, v|
       argument = k.to_sym
       mapped_argument = mapped_arguments[argument]

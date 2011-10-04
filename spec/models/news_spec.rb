@@ -1,9 +1,9 @@
 require_relative '../config'
 require 'models/news'
 
-describe News do
+describe News do  
   before(:each) do
-    News.site = 'http://www.example.com/:game/news'
+    News.stub!(:site).and_return('http://www.example.com/:game/news')
     stub_request(:get, 'http://www.example.com/dota/news').
     to_return(:body => open(File.join(File.dirname(__FILE__), 'data', 'news.html')) { |f| f.read })
   end

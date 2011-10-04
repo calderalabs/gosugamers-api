@@ -9,8 +9,8 @@ class News < RemoteModel
   field :link, String
   field :comment_count, Integer
 
-  replace_argument :page, :start, do |p| p * 25 end
-  default_argument :game, 'general'
+  replace_argument(:page, :start) { |p| p * 25 }
+  default_argument(:game, 'general')
   
   def initialize_with_element(e)
     a = e.at_xpath('a')
