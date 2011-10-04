@@ -6,35 +6,40 @@ class RemoteModel
   
   class << self
     attr_accessor :site, :element_xpath
+    
+    def field_type(name)
+      fields[name.to_sym]
+    end
+    
+    private
+    
+    def renamed_arguments
+      @renamed_arguments ||= {}
+    end
+
+    def mapped_arguments
+      @mapped_arguments ||= {}
+    end
+
+    def fields
+      @fields ||= {}
+    end
   end
-  
+
   def self.host
     URI.split(site).values_at(0, 2).join('://')
   end
-  
-  def self.renamed_arguments
-    @renamed_arguments ||= {}
-  end
-  
-  def self.mapped_arguments
-    @mapped_arguments ||= {}
-  end
-  
-  def self.fields
-    @fields ||= {}
-  end
 
   def self.field(field, type)
-    fields[field] = type
-    
+    fields[field.to_sym] = type
+
     class_eval <<-EOT
       def #{field}
         @#{field}
       end
       
       def #{field}=(val)
-        raise AttributeTypeMismatch, "\#{val.class.name} \#{val} cannot be assigned to \
-        \#{self.class.fields[:#{field}].class.name} \field #{field}" unless val.is_a?(self.class.fields[:#{field}])
+        raise AttributeTypeMismatch, "\#{val.class.name} \#{val} cannot be assigned to \#{self.class.field_type(:#{field}).name} field #{field}" unless val.is_a?(self.class.field_type(:#{field}))
         @#{field} = val
       end
     EOT
@@ -50,11 +55,11 @@ class RemoteModel
   end
 
   def self.rename_argument(argument, new_name)
-    renamed_arguments[argument] = new_name
+    renamed_arguments[argument.to_sym] = new_name.to_sym
   end
   
   def self.map_argument(argument, &block)
-    mapped_arguments[argument] = block
+    mapped_arguments[argument.to_sym] = block
   end
 
   def self.replace_argument(argument, new_name, &block)
@@ -67,15 +72,15 @@ class RemoteModel
   end
 
   def self.find(args = {})
-    args.dup do |k, v|
-      mapped_argument = mapped_arguments[k]
-      args[k] = mapped_argument.call(v) if mapped_argument
-      renamed_argument = renamed_arguments[k]
-      args.delete(:k) and args[renamed_argument] = args[k] if renamed_argument
+    args.dup.each do |k, v|
+      argument = k.to_sym
+      mapped_argument = mapped_arguments[argument]
+      args[argument] = mapped_argument.call(v) if mapped_argument
+      renamed_argument = renamed_arguments[argument]
+      args[renamed_argument] = args[argument] and args.delete(argument) if renamed_argument
     end
     
-    url = site
-    url.gsub!(/((:\w+)|\*)/) do |match|
+    url = site.gsub(/((:\w+)|\*)/) do |match|
       args.delete(match[1..-1].to_sym)
     end
     
