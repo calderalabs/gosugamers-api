@@ -7,14 +7,6 @@ class RemoteModel
   class << self
     attr_accessor :site, :element_xpath
     
-    def field_type(name)
-      fields[name.to_sym]
-    end
-    
-    def has_field?(name)
-      fields.has_key?(name.to_sym)
-    end
-    
     private
     
     def renamed_arguments
@@ -40,6 +32,14 @@ class RemoteModel
 
   def self.host
     URI.split(site).values_at(0, 2).join('://') if site
+  end
+
+  def self.field_type(name)
+    fields[name.to_sym]
+  end
+  
+  def self.has_field?(name)
+    fields.has_key?(name.to_sym)
   end
 
   def self.field(field, type)
@@ -112,6 +112,8 @@ class RemoteModel
     doc = Nokogiri::HTML(contents) do |config|
       config.noerror
     end
+    
+    return [] unless doc
     
     doc.xpath(element_xpath).map do |e|
       model = self.new

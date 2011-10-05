@@ -90,4 +90,24 @@ describe RemoteModel do
     
     model.find.first.link.should == 'link'
   end
+  
+  it "should sanitize content before parsing" do
+    stub_request(:get, 'http://www.example.com/elements').
+    to_return(:body => 'body')
+    
+    model = test_model {
+      self.site = 'http://www.example.com/elements'
+      
+      sanitize_content do |content|
+        content + ' one'
+      end
+      
+      sanitize_content do |content|
+        content + ' two'
+      end
+    }
+    
+    Nokogiri.should_receive(:HTML).with('body one two')
+    model.find
+  end
 end
