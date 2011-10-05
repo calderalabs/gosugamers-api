@@ -32,6 +32,10 @@ class RemoteModel
     def fields
       @fields ||= {}
     end
+    
+    def content_sanitizers
+      @content_sanitizers ||= []
+    end
   end
 
   def self.host
@@ -82,6 +86,10 @@ class RemoteModel
     default_arguments[argument.to_sym] = val
   end
 
+  def self.sanitize_content(&block)
+    content_sanitizers << block
+  end
+
   def self.find(args = {})
     args = default_arguments.merge(args)
     
@@ -99,6 +107,7 @@ class RemoteModel
     
     query = args.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join('&') unless args.empty?
     contents  = open([url, query].compact.join('?')) { |f| f.read }
+    content_sanitizers.each { |c| contents = c.call(contents) }
     
     doc = Nokogiri::HTML(contents) do |config|
       config.noerror

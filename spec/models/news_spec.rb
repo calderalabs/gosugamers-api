@@ -14,10 +14,13 @@ describe News do
   
   it { should have_field(:comment_count).of_type(Integer) }
   
+  it { should have_field(:created_at).of_type(DateTime) }
+  
   it 'should find the news from the example data' do
     news = News.find(:game => 'dota')
     news.first.title.should == 'Interview with pinksheep* from PMS Asterisk'
     news.first.link.should == 'http://www.example.com/news/17121-interview-with-pinksheep-from-pms-asterisk'
     news.first.comment_count.should == 12
+    news.first.created_at.should == DateTime.parse('2011-10-02 07:20:51 CET')
   end
 end

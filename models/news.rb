@@ -2,7 +2,7 @@ require 'nokogiri'
 
 class News < RemoteModel
   self.site = 'http://www.gosugamers.net/:game/news/archive'
-  self.element_xpath = "//tr[starts-with(@id, 'news')]/td[1]"
+  self.element_xpath = "//tr[starts-with(@id, 'news')]"
 
   field :created_at, DateTime
   field :title, String
@@ -12,11 +12,21 @@ class News < RemoteModel
   replace_argument(:page, :start) { |p| p * 25 }
   default_argument(:game, 'general')
   
+  sanitize_content do |content|
+    content.
+    gsub(/<\/span>(.*?)<\?/m, "<\/span><\/td><\/tr><\?").
+    gsub(/<\? if\(\$_GET\['small_news'\] == '1'\)\{ \?>(.*?)<\?\} else \{\?>/m, "").
+    gsub(/<\?.*\?>/, "")
+  end
+  
   def initialize_with_element(e)
-    a = e.at_xpath('a')
+    name_column = e.at_xpath('td[1]')
+    date_column = e.at_xpath('td[2]')
+    link = name_column.at_xpath('a')
     
-    self.title = a.content
-    self.link = "#{self.class.host}/#{a['href']}"
-    self.comment_count = e.xpath('text()').to_s.squeeze(' ').strip[1..-1].to_i
+    self.title = link.content
+    self.link = "#{self.class.host}/#{link['href']}"
+    self.comment_count = name_column.xpath('text()').to_s.squeeze(' ').strip[1..-1].to_i
+    self.created_at = DateTime.parse(date_column.at_xpath('span')['title'])
   end
 end
