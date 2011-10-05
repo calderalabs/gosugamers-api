@@ -3,6 +3,7 @@ require 'cgi'
 
 class RemoteModel
   AttributeTypeMismatch = Class.new(StandardError)
+  InvalidConfiguration = Class.new(StandardError)
   
   class << self
     attr_accessor :site, :element_xpath
@@ -91,6 +92,8 @@ class RemoteModel
   end
 
   def self.find(args = {})
+    return [] unless site
+    
     args = default_arguments.merge(args)
     
     args.dup.each do |k, v|

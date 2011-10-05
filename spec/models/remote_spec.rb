@@ -8,10 +8,6 @@ describe RemoteModel do
     model
   end
   
-  before(:each) do
-    stub_request(:get, /.*example.*/)
-  end
-  
   it "should return the host based on site" do
     model = test_model { self.site = 'http://www.example.com/path' }
     model.host.should == 'http://www.example.com'
@@ -21,64 +17,107 @@ describe RemoteModel do
     model = test_model { field :text, String }
     model.has_field?(:text).should be_true
     model.field_type(:text).should == String
+    lambda { model.text = 'text' }.should_not raise_error(RemoteModel::AttributeTypeMismatch)
   end
   
   it "should initialize attributes" do
-    model_object = test_model { field :text, String }.new(:text => 'example')
-    model_object.text.should == 'example'
+    model = test_model { field :text, String }
+    object = model.new(:text => 'example')
+    object.text.should == 'example'
   end
   
   it "should throw an exception if an attribute is set with the wrong type" do
-    model_object = test_model { field :text, String }.new
-    lambda { model_object.text = 5 }.should raise_error(RemoteModel::AttributeTypeMismatch)
+    model = test_model { field :text, String }
+    object = model.new
+    lambda { object.text = 5 }.should raise_error(RemoteModel::AttributeTypeMismatch)
   end
   
   it "should rename an argument before finding" do
+    stub_request(:get, 'http://www.example.com?renamed_arg=renamed').
+    to_return(:body => '<div>example</div>')
+    
     model = test_model { 
       self.site = 'http://www.example.com'
-      rename_argument :arg, :renarg
+      self.element_xpath = '//div'
+      
+      field :text, String
+      
+      rename_argument :arg, :renamed_arg
+      
+      def initialize_with_element(e)
+        self.text = e.content
+      end
     }
     
-    model.find(:arg => 'rename this')
-    should have_requested(:get, 'http://www.example.com').with(:query => { 'renarg' => 'rename this' })
+    model.find(:arg => 'renamed').first.text.should == 'example'
   end
   
   it "should map an argument value before finding" do
-    model = test_model {
+    stub_request(:get, 'http://www.example.com?arg=8').
+    to_return(:body => '<div>example</div>')
+    
+    model = test_model { 
       self.site = 'http://www.example.com'
-      map_argument(:arg) { |a| a * 2 }
-    }
+      self.element_xpath = '//div'
       
-    model.find(:arg => 4)
-    should have_requested(:get, 'http://www.example.com').with(:query => { 'arg' => '8' })
+      field :text, String
+      
+      map_argument(:arg) { |a| a * 2 }
+      
+      def initialize_with_element(e)
+        self.text = e.content
+      end
+    }
+    
+    model.find(:arg => 4).first.text.should == 'example'
   end
   
   it "should replace an argument with the new name and value before finding" do
-    model = test_model {
+    stub_request(:get, 'http://www.example.com?arg=replaced_arg').
+    to_return(:body => '<div>example</div>')
+    
+    model = test_model { 
       self.site = 'http://www.example.com'
-      replace_argument(:arg, :reparg) { |a| a + ' replaced' }
+      self.element_xpath = '//div'
+      
+      field :text, String
+      
+      map_argument(:arg) { |a| 'replaced_' + a }
+      
+      def initialize_with_element(e)
+        self.text = e.content
+      end
     }
     
-    model.find(:arg => 'example')
-    should have_requested(:get, 'http://www.example.com').with(:query => { 'reparg' => 'example replaced' })
+    model.find(:arg => 'arg').first.text.should == 'example'
   end
   
   it "should use the default value when the argument is not passed" do
-    model = test_model {
+    stub_request(:get, 'http://www.example.com?arg=default').
+    to_return(:body => '<div>example</div>')
+    
+    model = test_model { 
       self.site = 'http://www.example.com'
-      default_argument(:arg, 'default')
+      self.element_xpath = '//div'
+      
+      field :text, String
+      
+      default_argument :arg, 'default'
+      
+      def initialize_with_element(e)
+        self.text = e.content
+      end
     }
     
-    model.find
-    should have_requested(:get, 'http://www.example.com').with(:query => { 'arg' => 'default' })
+    model.find.first.text.should == 'example'
   end
   
   it "should find elements specified by the xpath" do
-    stub_request(:get, 'http://www.example.com/elements').
+    stub_request(:get, 'http://www.example.com').
     to_return(:body => '<div><a href="link"></a></div>')
     
     model = test_model {
-      self.site = 'http://www.example.com/elements'
+      self.site = 'http://www.example.com'
       self.element_xpath = '//div'
       
       field :link, String
@@ -92,22 +131,28 @@ describe RemoteModel do
   end
   
   it "should sanitize content before parsing" do
-    stub_request(:get, 'http://www.example.com/elements').
-    to_return(:body => 'body')
+    stub_request(:get, 'http://www.example.com').
+    to_return(:body => '<div><a><h1>example</h1></a></div>')
     
     model = test_model {
-      self.site = 'http://www.example.com/elements'
+      self.site = 'http://www.example.com'
+      self.element_xpath = '//div'
+      
+      field :text, String
       
       sanitize_content do |content|
-        content + ' one'
+        content.gsub(/<\/?a>/, "")
       end
       
       sanitize_content do |content|
-        content + ' two'
+        content.gsub(/<\/?h1>/, "")
+      end
+      
+      def initialize_with_element(e)
+        self.text = e.inner_html
       end
     }
     
-    Nokogiri.should_receive(:HTML).with('body one two')
-    model.find
+    model.find.first.text.should == 'example'
   end
 end
