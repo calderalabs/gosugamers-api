@@ -11,6 +11,10 @@ class RemoteModel
       fields[name.to_sym]
     end
     
+    def has_field?(name)
+      fields.has_key?(name.to_sym)
+    end
+    
     private
     
     def renamed_arguments

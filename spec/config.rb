@@ -9,11 +9,11 @@ require 'mongoid-rspec'
 ENV['RACK_ENV'] = 'test'
 
 require_relative '../application'
+require_relative 'matchers'
+
 FactoryGirl.find_definitions
 
 RSpec.configure do |config|
-  config.include Mongoid::Matchers
-  
   config.before(:suite) do
     DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean_with(:truncation)
