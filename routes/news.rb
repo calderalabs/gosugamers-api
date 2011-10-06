@@ -1,6 +1,6 @@
 require 'models/news'
 
-module Routes
+module Application
   class Application < Sinatra::Base
     get '/news' do
       content_type :json

@@ -4,6 +4,6 @@ require 'models/user'
 describe User do
   include Mongoid::Matchers
   
-  it { should have_field(:followed_teams).of_type(Array) }
-  it { should have_field(:_id).of_type(Integer) }
+  it { should embed_many(:followed_teams).of_type(Team) }
+  it { should embed_many(:followed_games).of_type(Game) }
 end

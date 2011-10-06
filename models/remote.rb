@@ -3,8 +3,7 @@ require 'cgi'
 
 class RemoteModel
   AttributeTypeMismatch = Class.new(StandardError)
-  InvalidConfiguration = Class.new(StandardError)
-  
+
   class << self
     attr_accessor :site, :element_xpath
     

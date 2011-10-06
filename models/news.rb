@@ -9,7 +9,7 @@ class News < RemoteModel
   field :link, String
   field :comment_count, Integer
 
-  replace_argument(:page, :start) { |p| p * 25 }
+  replace_argument(:page, :start) { |p| ([p.to_i, 1].max - 1) * 25 }
   default_argument(:game, 'general')
   
   sanitize_content do |content|

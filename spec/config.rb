@@ -6,11 +6,12 @@ require 'mongoid'
 require 'webmock/rspec'
 require 'mongoid-rspec'
 
-ENV['RACK_ENV'] = 'test'
+ENV['RACK_ENV'] ||= 'test'
 
 require_relative '../application'
 require_relative 'matchers'
 
+Application.initialize_db
 FactoryGirl.find_definitions
 
 RSpec.configure do |config|

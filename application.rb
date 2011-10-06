@@ -8,4 +8,19 @@ require 'routes/news'
 require 'routes/bets'
 require 'routes/replays'
 
-Mongoid.load!('config/mongoid.yml')
+module Application
+  def self.initialize_db
+    Mongoid.load!('config/mongoid.yml')
+  end
+  
+  def self.global
+    collection = Mongoid.database['global']
+    
+    if collection.count != 0
+      collection.find_one()
+    else
+      collection.insert({})
+      collection.find_one()
+    end
+  end
+end

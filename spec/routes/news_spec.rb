@@ -5,7 +5,7 @@ describe 'News routes' do
   include Rack::Test::Methods
 
   def app
-    Routes::Application
+    Application::Application
   end
   
   it "should return the list of news"

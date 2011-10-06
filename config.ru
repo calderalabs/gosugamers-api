@@ -2,5 +2,5 @@ require 'bundler'
 
 Bundler.require
 
-require './application'
-run Routes::Application
+require File.join(File.dirname(__FILE__), 'application')
+run Application::Application
