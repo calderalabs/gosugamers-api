@@ -66,7 +66,7 @@ class RemoteModel
     end
   end
   
-  def initialize_with_element(e)
+  def initialize_with_element(e, from_site = nil)
   end
 
   def self.rename_argument(argument, new_name)
@@ -119,7 +119,7 @@ class RemoteModel
     
     doc.xpath(element_xpath).map do |e|
       model = self.new
-      model.initialize_with_element(e)
+      model.initialize_with_element(e, url)
       model
     end
   end

@@ -7,20 +7,13 @@ require 'models/remote'
 require 'routes/news'
 require 'routes/bets'
 require 'routes/replays'
+require 'parse'
 
 module Application
-  def self.initialize_db
-    Mongoid.load!('config/mongoid.yml')
-  end
-  
-  def self.global
-    collection = Mongoid.database['global']
-    
-    if collection.count != 0
-      collection.find_one()
-    else
-      collection.insert({})
-      collection.find_one()
+  def self.configure
+    Parse::Configuration.configure do |c|
+      c.application_id = 'KT03lBl47kQ7mFcFu2A7OsVddHcxAwLroITBP6MM'
+      c.master_key = 'YHRqssmllNOqCLFXU5ePyBirKspBsDArdo3olpV3'
     end
   end
 end
