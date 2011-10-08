@@ -5,9 +5,13 @@ module Parse
   class Notification 
     attr_accessor :type, :channels, :alert, :badge, :sound, :custom_data
     
+    def self.push!(options = {})
+      new(options).push!
+    end
+    
     def initialize(options = {})
       @type = options[:type]
-      @channels = options[:channels]
+      @channels = [*options[:channels]]
       
       @alert = options[:alert]
       @badge = options[:badge]
@@ -30,24 +34,6 @@ module Parse
           }
         )
       end
-    end
-    
-    def +(other)
-      self.class.new(
-        :badge => @badge + other.badge,
-        :channels => @channels & other.channels,
-        :alert => [@alert, other.alert].join('\n\n')
-      )
-    end
-  end
-end
-
-class Array
-  def to_notification
-    return nil if empty?
-    
-    inject(Parse::Notification.new) do |notification, e|
-      notification += e.to_notification
     end
   end
 end

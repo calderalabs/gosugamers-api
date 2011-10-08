@@ -2,6 +2,8 @@ require 'rest-client'
 
 module Parse
   class Request
+    ConfigurationError = Class.new(StandardError)
+    
     class << self
       attr_accessor :application_id, :master_key
     end
@@ -13,12 +15,15 @@ module Parse
     end
     
     def initialize(path, method = :get, args = {})
-      @path = path
+      @path = path or raise ArgumentError, "no path specified"
       @method = method
       @args = args
     end
     
     def execute!(&block)
+      raise ConfigurationError, "you must provide a master key" unless self.class.master_key
+      raise ConfigurationError, "you must provide an application id" unless self.class.application_id
+      
       RestClient::Request.execute(
         :method => @method,
         :url => "https://#{self.class.application_id}:#{self.class.master_key}@api.parse.com/1/#{@path}",

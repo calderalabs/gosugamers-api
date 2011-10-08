@@ -8,13 +8,9 @@ class RemoteModel
   class << self
     attr_accessor :site, :element_xpath
     
-    def fields
-      _fields.dup
-    end
-    
     private
     
-    def _fields
+    def fields
       @fields ||= {}
     end
     
@@ -39,16 +35,20 @@ class RemoteModel
     URI.split(site).values_at(0, 2).join('://') if site
   end
 
+  def self.field_names
+    fields.keys
+  end
+
   def self.field_type(name)
-    _fields[name.to_sym]
+    fields[name.to_sym]
   end
   
   def self.has_field?(name)
-    _fields.has_key?(name.to_sym)
+    fields.has_key?(name.to_sym)
   end
 
   def self.field(field, type)
-    _fields[field.to_sym] = type
+    fields[field.to_sym] = type
 
     class_eval <<-EOT
       def #{field}
@@ -131,7 +131,7 @@ class RemoteModel
   end
   
   def attributes 
-    self.class.fields.each_with_object({}) do |(field, _), attrs|
+    self.class.field_names.each_with_object({}) do |field, attrs|
       attrs[field] = send(field)
     end
   end

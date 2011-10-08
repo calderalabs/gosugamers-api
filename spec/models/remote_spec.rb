@@ -17,6 +17,7 @@ describe RemoteModel do
     model = test_model { field :text, String }
     model.has_field?(:text).should be_true
     model.field_type(:text).should == String
+    model.field_names.should include(:text)
     lambda { model.text = 'text' }.should_not raise_error(RemoteModel::AttributeTypeMismatch)
   end
   
@@ -155,14 +156,7 @@ describe RemoteModel do
     
     model.find.first.text.should == 'example'
   end
-  
-  it "should not allow editing fields directly" do
-    model = test_model
-    
-    model.fields[:text] = String
-    model.has_field?(:text).should be_false
-  end
-  
+
   it "should return an hash of fields with their values" do
     model = test_model {
       field :text, String

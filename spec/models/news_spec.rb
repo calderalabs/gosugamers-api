@@ -12,6 +12,7 @@ describe News do
     to_return(:body => open(File.join(File.dirname(__FILE__), '..', 'data', 'news.html')) { |f| f.read })
     
     news = News.find(:game => 'dota').first
+    news.id.should == '17121'
     news.game.should == 'dota'
     news.title.should == 'Interview with pinksheep* from PMS Asterisk'
     news.link.should == 'http://www.gosugamers.net/news/17121-interview-with-pinksheep-from-pms-asterisk'

@@ -4,6 +4,7 @@ class News < RemoteModel
   self.site = 'http://www.gosugamers.net/:game/news/archive'
   self.element_xpath = "//tr[starts-with(@id, 'news')]"
 
+  field :id, String
   field :created_at, DateTime
   field :game, String
   field :title, String
@@ -25,6 +26,7 @@ class News < RemoteModel
     date_column = e.at_xpath('td[2]')
     link = name_column.at_xpath('a')
     
+    self.id = e['id'].gsub('news', '')
     self.game = URI.parse(from_site).path.split('/')[1] if from_site
     self.title = link.content
     self.link = "#{self.class.host}/#{link['href']}"
