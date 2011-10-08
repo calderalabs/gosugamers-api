@@ -4,7 +4,7 @@ require 'models/remote'
 describe RemoteModel do
   def test_model(&block)
     model = Class.new(RemoteModel)
-    model.class_eval(&block)
+    model.class_eval(&block) if block
     model
   end
   
@@ -154,5 +154,28 @@ describe RemoteModel do
     }
     
     model.find.first.text.should == 'example'
+  end
+  
+  it "should not allow editing fields directly" do
+    model = test_model
+    
+    model.fields[:text] = String
+    model.has_field?(:text).should be_false
+  end
+  
+  it "should return an hash of fields with their values" do
+    model = test_model {
+      field :text, String
+      field :number, Integer
+    }
+    
+    object = model.new
+    object.text = 'example'
+    object.number = 5
+    
+    object.attributes.should == {
+      :text => 'example',
+      :number => 5
+    }
   end
 end

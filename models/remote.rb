@@ -3,11 +3,20 @@ require 'cgi'
 
 class RemoteModel
   AttributeTypeMismatch = Class.new(StandardError)
-
+  SiteArgumentMissing = Class.new(StandardError)
+  
   class << self
     attr_accessor :site, :element_xpath
     
+    def fields
+      _fields.dup
+    end
+    
     private
+    
+    def _fields
+      @fields ||= {}
+    end
     
     def renamed_arguments
       @renamed_arguments ||= {}
@@ -20,10 +29,6 @@ class RemoteModel
     def default_arguments
       @default_arguments ||= {}
     end
-
-    def fields
-      @fields ||= {}
-    end
     
     def content_sanitizers
       @content_sanitizers ||= []
@@ -35,15 +40,15 @@ class RemoteModel
   end
 
   def self.field_type(name)
-    fields[name.to_sym]
+    _fields[name.to_sym]
   end
   
   def self.has_field?(name)
-    fields.has_key?(name.to_sym)
+    _fields.has_key?(name.to_sym)
   end
 
   def self.field(field, type)
-    fields[field.to_sym] = type
+    _fields[field.to_sym] = type
 
     class_eval <<-EOT
       def #{field}
@@ -93,6 +98,7 @@ class RemoteModel
   def self.find(args = {})
     return [] unless site
     
+    args.delete_if { |k, v| v.nil? }
     args = default_arguments.merge(args)
     
     args.dup.each do |k, v|
@@ -104,7 +110,7 @@ class RemoteModel
     end
     
     url = site.gsub(/((:\w+)|\*)/) do |match|
-      args.delete(match[1..-1].to_sym)
+      args.delete(match[1..-1].to_sym) or raise SiteArgumentMissing, "you must specify #{match} for #{site}"
     end
     
     query = args.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join('&') unless args.empty?
@@ -122,5 +128,15 @@ class RemoteModel
       model.initialize_with_element(e, url)
       model
     end
+  end
+  
+  def attributes 
+    self.class.fields.each_with_object({}) do |(field, _), attrs|
+      attrs[field] = send(field)
+    end
+  end
+  
+  def to_json(*args)
+    self.attributes.to_json
   end
 end

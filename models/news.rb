@@ -1,5 +1,4 @@
 require 'nokogiri'
-require 'parse'
 
 class News < RemoteModel
   self.site = 'http://www.gosugamers.net/:game/news/archive'
@@ -35,7 +34,7 @@ class News < RemoteModel
   
   def to_notification
     Parse::Notification.new(
-      :channel => game,
+      :channels => game,
       :alert => title,
       :badge => 1,
       :custom_data => { :url => link }
