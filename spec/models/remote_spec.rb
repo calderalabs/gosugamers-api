@@ -45,7 +45,7 @@ describe RemoteModel do
       
       rename_argument :arg, :renamed_arg
       
-      def initialize_with_element(e, from_site = nil)
+      def initialize_with_element(e)
         self.text = e.content
       end
     }
@@ -65,7 +65,7 @@ describe RemoteModel do
       
       map_argument(:arg) { |a| a * 2 }
       
-      def initialize_with_element(e, from_site = nil)
+      def initialize_with_element(e)
         self.text = e.content
       end
     }
@@ -85,7 +85,7 @@ describe RemoteModel do
       
       map_argument(:arg) { |a| 'replaced_' + a }
       
-      def initialize_with_element(e, from_site = nil)
+      def initialize_with_element(e)
         self.text = e.content
       end
     }
@@ -105,7 +105,7 @@ describe RemoteModel do
       
       default_argument :arg, 'default'
       
-      def initialize_with_element(e, from_site = nil)
+      def initialize_with_element(e)
         self.text = e.content
       end
     }
@@ -123,7 +123,7 @@ describe RemoteModel do
       
       field :link, String
       
-      def initialize_with_element(e, from_site = nil)
+      def initialize_with_element(e)
         self.link = e.at_xpath('a')['href']
       end
     }
@@ -149,7 +149,7 @@ describe RemoteModel do
         content.gsub(/<\/?h1>/, "")
       end
       
-      def initialize_with_element(e, from_site = nil)
+      def initialize_with_element(e)
         self.text = e.inner_html
       end
     }

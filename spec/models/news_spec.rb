@@ -2,6 +2,7 @@ require_relative '../config'
 require 'models/news'
 
 describe News do    
+  it { should have_field(:id).of_type(Integer) }
   it { should have_field(:title).of_type(String) }
   it { should have_field(:link).of_type(String) }
   it { should have_field(:comment_count).of_type(Integer) }
@@ -9,10 +10,10 @@ describe News do
   
   it 'should find the news from the example data' do   
     stub_request(:get, 'http://www.gosugamers.net/dota/news/archive').
-    to_return(:body => open(File.join(File.dirname(__FILE__), '..', 'data', 'news.html')) { |f| f.read })
+    to_return(:body => File.new(File.join(File.dirname(__FILE__), '..', 'data', 'news.html')))
     
     news = News.find(:game => 'dota').first
-    news.id.should == '17121'
+    news.id.should == 17121
     news.game.should == 'dota'
     news.title.should == 'Interview with pinksheep* from PMS Asterisk'
     news.link.should == 'http://www.gosugamers.net/news/17121-interview-with-pinksheep-from-pms-asterisk'

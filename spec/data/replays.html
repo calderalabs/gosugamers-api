@@ -1,0 +1,4363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+	<head>
+
+	
+	<title>GosuGamers DotA | Replays</title>
+
+	<base href="http://gosugamers.net/dota/">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	
+		<meta name="description" content="GosuGamers is the main source for StarCraft, WarCraft and DotA news. GosuBets, patches, interviews, features, events and coverages of the gaming scene.">
+
+		<meta name="keywords" content="starcraft, warcraft, gosu, gamers, starcraft 2, replays, gaming, cyber, battle, blizzard, dota, defense of the ancients">
+		<meta name="author" content="GosuGamers">
+		<link rel="alternate" type="application/xml" title="Global RSS" href="http://gosugamers.net/all.rss" />
+		<link rel="alternate" type="application/xml" title="Section RSS" href="http://gosugamers.net/gosugamers.rss" />
+
+	
+	
+		<meta name="robots" content="index,follow">
+
+	
+
+	<link rel="icon" href="http://www.gosugamers.net/images/favicon.ico" type="image/x-icon">
+
+	<link rel="shortcut icon" href="http://www.gosugamers.net/images/favicon.ico" >
+
+        <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.6.0.2/prototype.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.1/scriptaculous.js?load=effects,dragdrop,slider" type="text/javascript"></script>
+    
+	<script language="javascript" src="/include/javascript/showlists.js"></script>
+
+	<script type="text/javascript" src="/include/javascript/xmlhttp.js"></script>
+	<script type="text/javascript" src="/include/javascript/memb_cust.js"></script>
+
+        <script language="javascript" type="text/javascript">
+        var c = new Date();
+        var clocktime = 1000 * (1318239277 + 60*c.getTimezoneOffset()); //utc, by tricking Date
+
+        
+            var cettimezone = 2; // CEST = Central European Summer Time, UTC+2
+            var esttimezone = -4; // EDT = Eastern Daylight Time, UTC-4
+            var psttimezone = -7; // PDT = Pacific Daylight Time, UTC-7
+
+        
+        var ksttimezone = 9; // KST, Korea Standard Time, UTC+9, not affected by daylight savings
+
+        // Takeover ad adjustment.
+        Event.observe(window, 'load', function() {
+            if ($$('#takeover div').length !== 0) {
+            	new Effect.Tween('wrapper', 0, 150, function(p) {
+                    $('wrapper').style.marginTop = p + 'px';
+            	});
+            }
+        });
+        </script>
+
+	<script type="text/javascript" src="/include/javascript/clock.js"></script>
+
+	<LINK rel="stylesheet" type="text/css" href="skins/addons/general.css"><LINK rel="stylesheet" type="text/css" href="skins/css/skin_58_v73.css">
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-7300738326446560");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-7300738326446560", "Babyskyscraper");
+GA_googleAddSlot("ca-pub-7300738326446560", "Box");
+GA_googleAddSlot("ca-pub-7300738326446560", "headline-prime");
+GA_googleAddSlot("ca-pub-7300738326446560", "Leaderboard");
+GA_googleAddSlot("ca-pub-7300738326446560", "Skyscraper");
+GA_googleAddSlot("ca-pub-7300738326446560", "Takeover");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+
+</script>
+<style>
+#takeover {
+    background: #000;
+    position: fixed;
+    left: 50%;
+    margin-left: -1000px;
+    top: 35px;
+    width: 2000px;
+}
+</style>
+</head>
+
+
+<body>
+
+<div id="takeover">
+    	<script type='text/javascript'>
+	    GA_googleFillSlot("Takeover");
+	</script>
+    </div>
+
+<div id="wrapper">
+
+	<div class="main_box" id="upper_advertisement">
+
+		<div class="main_top">
+
+			Advertisement
+
+		</div>
+
+		<div class="main_middle">
+
+			<!-- Leaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("Leaderboard");
+</script>
+
+		</div>
+
+		<div class="main_bottom">
+
+			&nbsp;
+
+		</div>
+
+	</div>
+
+	<div id="header" class="cf" style="position:relative">
+
+		<div id="logo" onClick="window.location = 'http://www.gosugamers.net'" style="cursor:pointer;">
+
+		</div>
+
+    	<div class="header_slice" id="header_slice_top">
+
+    		<div class="flags">
+
+				<label>Language:</label>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=en"><img align="absmiddle" src="/bilder/flags_long/United Kingdom.gif" border="0" ></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=sv"><img align="absmiddle" src="/bilder/flags_long/Sweden.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=de"><img align="absmiddle" src="/bilder/flags_long/Germany.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=es"><img align="absmiddle" src="/bilder/flags_long/Spain.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=ru"><img align="absmiddle" src="/bilder/flags_long/Russia.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=kr"><img align="absmiddle" src="/bilder/flags_long/Korea.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=cn"><img align="absmiddle" src="/bilder/flags_long/China.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=pt"><img align="absmiddle" src="/bilder/flags_long/Portugal.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=pl"><img align="absmiddle" src="/bilder/flags_long/Poland.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=fr"><img align="absmiddle" src="/bilder/flags_long/France.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+    		</div>
+
+		</div>
+
+			<div id="header_mid">
+
+			    <div id="site_name">
+
+			    	GosuGamers
+			    </div>
+
+			    <div id="slogan">
+
+			    	Your main source
+
+			    </div>
+
+			    <div id="game_buttons">
+
+					
+					<div class="game_button ">
+
+						
+						<div class="game_button_area">
+
+							<a href="/poker">Poker</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						
+						<div class="game_button_area">
+
+							<a href="/diablo">Diablo 3</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="http://www.gosugamers.net/wow/images/site/wowtroll.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/wow'">
+						<div class="game_button_area">
+
+							<a href="/wow">WoW</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="http://www.gosugamers.net/starcraft/images/skins/honlogo-39x35.png" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/hon'">
+						<div class="game_button_area">
+
+							<a href="/hon">HoN</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						
+						<div class="game_button_area">
+
+							<a href="/dota2">Dota 2</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button game_button_selected">
+
+						<img src="skins/tribute/dota2.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/dota'">
+						<div class="game_button_area">
+
+							<a href="/dota">DotA</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="skins/tribute/orceye.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/warcraft'">
+						<div class="game_button_area">
+
+							<a href="/warcraft">WarCraft 3</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="http://www.gosugamers.net/starcraft2/skins/tribute/sc2zeratul.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/starcraft2'">
+						<div class="game_button_area">
+
+							<a href="/starcraft2">StarCraft 2</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="skins/tribute/hydralisk.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/starcraft'">
+						<div class="game_button_area">
+
+							<a href="/starcraft">StarCraft</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="http://www.gosugamers.net/general/images/skins/general_icon.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/general'">
+						<div class="game_button_area">
+
+							<a href="/general">Home</a>
+
+						</div>
+
+					</div>
+
+					
+				</div>
+
+		</div>
+
+		<div class="header_slice"  id="header_slice_bottom">
+
+			<div class="time" onmouseover="this.className='time_hover time'" onmouseout="this.className='time'">
+
+				<span id="people_online">
+
+					Online: 2,876
+				</span>
+
+				<b><span title="Central European Time (CET)" id="clock">&nbsp;</span></b> CET
+
+				<!-- <span title="Pacific Standard Time (PST)" id="pstclock">&nbsp;</span> PST
+
+				<span title="Eastern Standard  Time (EST)" id="estclock">&nbsp;</span> EST
+
+				<span title="Korea Standard Time" id="kstclock">&nbsp;</span> KST -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+<div id="content" style="position:relative">
+
+	<div id="first">
+
+		
+	<div class="first_box" id="box_membership">
+
+		<div class="first_top">
+
+			<h2>Membership</h2>
+
+		</div>
+
+		<div class="first_middle">
+
+	    	<div id="login_form">
+
+			    <form name="login" action="admin/a_members.php" method="POST" style="display:inline;">
+			    <input type="hidden" name="action" value="login">
+
+			    <div>
+
+			    <input type="text" name="username"
+
+					value="Username"
+						onFocus="if(this.value == 'Username'){ this.value = '' }">
+
+				</div>
+
+			    <div>
+
+			   		<input type="password" name="losen" value="Password" onFocus="if(this.value == 'Password'){ this.value = ''}">
+
+			    </div>
+
+			    <div>
+
+			 	   <input type="checkbox" name="autologin" checked>
+
+				   Autologin
+
+				</div>
+
+				<div>
+
+				<input type=submit value="Log in" class="inputspecial">
+
+				</div>
+
+				<div id="register">
+
+			    	<a href="register.php">Create an account</a>
+
+			    </div>
+			    </form>
+
+
+
+			   <div>
+
+			    	<a href="recover_password/">Forgot password?</a>
+
+			    </div>
+
+			   </div>
+
+		</div>
+
+		<div class="first_bottom">
+
+			&nbsp;
+
+		</div>
+
+	</div>
+
+
+
+<div class="first_box" id="box_navigation">
+	
+	<div class="first_top">
+	
+		<h2>Navigation</h2>
+	
+	</div>
+	
+	<div class="first_middle">
+	
+			
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'news'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="n"  title="News (Hotkey: Alt-Shift-n)"  href="news">News</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut navbarbut_hover"
+				
+				onClick="window.location = 'replays/'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut navbarbut_hover'">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="r"  title="Replays (Hotkey: Alt-Shift-r)"  href="replays/">Replays</a>
+
+				 
+			</div>
+			
+			
+		<ul>		
+			<li>
+			
+				<a href="replays">Replay overview</a>
+				
+			</li>
+						
+		<ul></ul>		
+			<li>
+			
+				<a href="downloads.php?cat=4">Replay packages</a>
+				
+			</li>
+
+						
+				
+			<li>
+			
+				<a href="maps">Maps</a>
+				
+			</li>
+						
+				
+			<li>
+			
+				<a href="/replays.php?i=a&step=1">Submit a top replay</a>
+				
+			</li>
+						
+				
+			<li>
+			
+				<a href="replays/">Search replays</a>
+
+				
+			</li>
+						
+		</ul>		
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'forum'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="f"  title="Forum (Hotkey: Alt-Shift-f)"  href="forum">Forum</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'gosubet'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+
+					
+									
+				</div>
+				
+								
+				 <a accesskey="g"  title="GosuBet (Hotkey: Alt-Shift-g)"  href="gosubet">GosuBet</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'facts.php?id=213'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey=""  href="facts.php?id=213">GosuCup #4</a>
+				 
+			</div>
+
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'rankings'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="k"  title="Rankings (Hotkey: Alt-Shift-k)"  href="rankings">Rankings</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'blogs'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+
+				
+								
+				 <a accesskey="b"  title="Blogs (Hotkey: Alt-Shift-b)"  href="blogs">Blogs</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'teamgg'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey=""  href="teamgg">Team GG</a>
+				 
+			</div>
+			
+			
+				
+	</div>
+
+	 
+ </div>
+<div class="last_box" id="box_advertisement">
+ 
+    <div class="last_top">
+    		
+    	<h2>Advertisement</h2>
+
+	</div>
+    
+	<div class="last_middle">
+    
+		<center><!-- ca-pub-7300738326446560/Skyscraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("Skyscraper");
+</script></center>    
+    </div>
+
+    
+    <div class="last_bottom">
+    
+    	&nbsp;
+    	
+    </div>
+    
+</div>
+<div class="last_box" id="box_advertisement">
+ 
+    <div class="last_top">
+    		
+    	<h2>Advertisement</h2>
+
+	</div>
+
+    
+	<div class="last_middle">
+    
+		<center><!-- ca-pub-7300738326446560/Babyskyscraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("Babyskyscraper");
+</script></center>    
+    </div>
+    
+    <div class="last_bottom">
+    
+    	&nbsp;
+    	
+    </div>
+    
+</div>
+<div class="first_box" id="box_search">
+	
+	<div class="first_top">
+
+	
+		<h2><img src='/bilder/silk/magnifier.png' title='' alt='' border=0 style='vertical-align: bottom'> Search</h2>
+	
+	</div>
+	
+	<div class="first_middle">
+	
+		<form action="search.php" method="get" style="display:inline;">
+			
+		
+				<div style="padding:2px;">
+				
+				
+					<div id="box_search_keyword" style="margin-bottom:3px;">
+				
+						<input accesskey="e" size="21" type="input" value="Keyword..." name="Skeyword" onClick="if(this.value == 'Keyword...'){ this.value = ''; }" onFocus="if(this.value == 'Keyword...'){ this.value = ''; }">
+						
+					</div>
+
+					
+					
+					<div style="float:right; padding-right:5px;//padding-right: 7px" id="box_search_submit">
+					
+						<input type="submit" value="Search">
+						
+					</div>
+					
+					
+					<div style="float:left;" id="box_search_select">
+					
+						<select name="i">
+						
+							<option value="members" >Members</option>
+							<option value="news" >News</option>
+							<option value="forum" >Forum</option>
+
+							<option value="features" >Features</option>
+							<option value="rankings" >Rankings</option>
+							
+						</select>
+					
+					</div>
+					
+					
+					<div style="clear:both;"></div>
+					
+					
+				</div>
+			
+			
+		</form>
+		
+	</div>
+
+		
+	<div class="first_bottom">
+	
+		&nbsp;
+		
+	</div>
+	
+</div>
+			
+
+<div class="clear"></div>
+
+	</div>
+
+	<div id="cont">
+
+		
+		
+
+	<table border="0" cellpadding="0" cellspacing="0" width="500" style="padding-top:3px;">
+	<tr><td class="cont_top">
+
+		<a href="replays">Replays</A> \
+		<span class="nav_tree_current">
+
+			Search
+		</span>
+
+	
+
+
+	
+	<tr><td class="cont_middle">
+
+		<table>
+			<form method="POST" action="/admin/a_replays.php" style="display:inline;";>
+										<tr>
+				<td>Player one<td><input type="text" name="p1" value="" style="width:135px">
+				<input type="hidden" name="sett_id" value="search"><select name="p1race">
+					<option value="">Any race</option>
+									</select>
+
+				<tr>
+
+				<tr><td>Player two<td><input type="text" name="p2" value="" style="width:135px">
+				 <select name="p2race">
+					<option value="">Any race</option>
+									 </select>
+		        <tr>
+	            <td>Map: <tD><input type="text" name="map" value="" style="width:135px">
+
+				<tr>
+				<td>Event: <td><input type="text" name="event" value="" style="width:135px">
+				<tr><td>Format: <td>
+
+					<select name="format">
+
+						
+						<option value="">Any</option>
+
+						<option value="1on1">1on1</option>
+
+						<option value="2on2">2on2</option>
+						<option value="3on3">3on3</option>
+						<option value="4on4">4on4</option>
+
+						
+							<option value="5on5" selected>5on5</option>
+
+						
+					</select></td></tr>
+
+	           <tr><tD colspan="2" style="padding-left:10px;padding-top:3px;padding-bottom:3px;"><input type=submit value="Search" class="inputspecial" style="width:131px;"></form><br><br><br>
+
+	           <tr><td>
+		</table>
+	<tr><td width="500" valign="middle" class="cont_bottom" STYLE="padding-left:5px;">&nbsp;</td></tr>
+	</table>
+<br>
+
+
+	
+	 <table cellpadding="0" cellspacing="0" width="800" class="wide_box">
+
+	<tr>
+
+		<td class="wide_top">
+
+			<span class="nav_tree_current">Replays</span>
+
+		</td>
+
+
+
+	</tr>
+
+	<tr>
+
+		
+		<td class="wide_middle navtab_parent">
+
+			<div class="navtab navtab_selected">
+
+                            <a href="replays.php?">All replays</a>
+
+			</div>
+
+			<div class="navtab ">
+
+				<a href="replays.php?&filter=downloads&filter_period=2w">Most downloaded</a>
+
+			</div>
+
+			<div class="navtab ">
+
+				<a href="replays.php?&filter=ratings&filter_period=2w">Best rated</a>
+
+			</div>
+
+			<div class="navtab ">
+
+				<a href="replays.php?&filter=rr">Recommended replays</a>
+
+			</div>
+
+			
+
+		</td>
+
+	</tr>
+
+	<tr><td>
+	<table cellspacing=0 cellpadding=3 class=multitable width='800'><tr class='cont_top_alt'><td title=""  class='cont_top_alt'><a href='/replays.php?&order=antal_kom'>Com</a></u> <td title=""  class='cont_top_alt'><a href='/replays.php?&order=spelare1'>Player one</a></u> <td title=""  class='cont_top_alt'><a href='/replays.php?&order=spelare2'>Player two</a></u> <td title=""  class='cont_top_alt'><a href='/replays.php?&order=map'>Map</a></u> <td title=""  class='cont_top_alt'><a href='/replays.php?&order=event'>Event</a></u> <td title=""  class='cont_top_alt'><a href='/replays.php?&order=rate'>Rate</a></u> <td title=""  class='cont_top_alt'><a href='/replays.php?&order=klick'>DLs</a></u> <td title=""  class='cont_top_alt'><a href='/replays.php?&order=datum&sort=asc'>Date</a></u> <img src='/design/icons/sort_down.gif'>	<tr class="wide_middle" id="/replays/51634"
+	onmouseover='document.getElementById("/replays/51634").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51634").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51634'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(16)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51634">BK</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51634">DIE</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			6.8
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51634" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				102</a>
+
+			</a>
+        	<td width="85"><center>2011-10-10		<tr class="wide_middle" id="/replays/51631"
+	onmouseover='document.getElementById("/replays/51631").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51631").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51631'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51631">S4M</a>
+
+	<td width="180">
+
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51631">Rangers</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			5.7
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51631" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				200</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51628"
+	onmouseover='document.getElementById("/replays/51628").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51628").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51628'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(01)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51628">esG</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51628">STK</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>eDL
+	<td width="30" style="text-align:center;">
+
+  			<b>10</b>
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51628" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				284</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51630"
+	onmouseover='document.getElementById("/replays/51630").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51630").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51630'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(11)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51630">F|five</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51630">CC</a>
+
+	<td width="135">
+
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			7.8
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51630" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				281</a>
+			</a>
+
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51629"
+	onmouseover='document.getElementById("/replays/51629").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51629").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51629'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(04)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51629">Virus</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51629">icon</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			8.2
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51629" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				104</a>
+
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51625"
+	onmouseover='document.getElementById("/replays/51625").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51625").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51625'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(07)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51625">STK</a>
+
+	<td width="180">
+
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51625">esG</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>eDL
+	<td width="30" style="text-align:center;">
+  			9.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51625" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				186</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51624"
+	onmouseover='document.getElementById("/replays/51624").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51624").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51624'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(32)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51624">.exe</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51624">[CC]</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+
+  			7.2
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51624" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				231</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51623"
+	onmouseover='document.getElementById("/replays/51623").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51623").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51623'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(13)
+	<td width="180">
+
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51623">Decerto</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51623">esG</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>RGL 3
+	<td width="30" style="text-align:center;">
+  			5.5
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51623" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				106</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51622"
+	onmouseover='document.getElementById("/replays/51622").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51622").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51622'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(21)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51622">XBOCT+4</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51622">DTS</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			7.5
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51622" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1152</a>
+
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51621"
+	onmouseover='document.getElementById("/replays/51621").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51621").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51621'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(24)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51621">DTS</a>
+
+	<td width="180">
+
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51621">XBOCT+4</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			9.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51621" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				885</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51620"
+	onmouseover='document.getElementById("/replays/51620").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51620").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51620'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51620">WAG</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51620">Skynet</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>GES IV
+	<td width="30" style="text-align:center;">
+
+  			<b>10</b>
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51620" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				554</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51619"
+	onmouseover='document.getElementById("/replays/51619").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51619").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51619'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51619">Skynet</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51619">WAG</a>
+
+	<td width="135">
+
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>GES IV
+	<td width="30" style="text-align:center;">
+  			5.5
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51619" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				342</a>
+			</a>
+
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51603"
+	onmouseover='document.getElementById("/replays/51603").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51603").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51603'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51603">BlazeCity</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51603">Sp</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>SMM Kedah Q..
+	<td width="30" style="text-align:center;">
+  			9.0
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51603" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				62</a>
+
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51604"
+	onmouseover='document.getElementById("/replays/51604").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51604").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51604'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(02)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51604">Noble</a>
+
+	<td width="180">
+
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51604">SP</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>SMM Kedah Q..
+	<td width="30" style="text-align:center;">
+  			7.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51604" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				63</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51614"
+	onmouseover='document.getElementById("/replays/51614").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51614").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51614'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(10)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51614">monkey</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51614">XBOCT+4</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+
+  			7.2
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51614" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				651</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51613"
+	onmouseover='document.getElementById("/replays/51613").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51613").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51613'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(18)
+	<td width="180">
+
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51613">M5</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51613">DTS</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			7.8
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51613" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				2130</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51612"
+	onmouseover='document.getElementById("/replays/51612").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51612").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51612'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(23)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51612">DTS</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51612">M5</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			9.7
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51612" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				2853</a>
+
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51609"
+	onmouseover='document.getElementById("/replays/51609").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51609").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51609'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(25)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51609">DTS</a>
+
+	<td width="180">
+
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51609">M5</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			9.6
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51609" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				2270</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51608"
+	onmouseover='document.getElementById("/replays/51608").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51608").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51608'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(11)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51608">DTS</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51608">XBOCT+4</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+
+  			7.8
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51608" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				727</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51607"
+	onmouseover='document.getElementById("/replays/51607").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51607").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51607'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(11)
+	<td width="180">
+
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51607">monkey</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51607">M5</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			7.3
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51607" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1147</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51611"
+	onmouseover='document.getElementById("/replays/51611").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51611").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51611'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(40)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51611">Neolution</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51611">Orange.eSports</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"><img src="design/icons/new.gif" alt="New replay" align="absmiddle"> </div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			8.6
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51611" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				4307</a>
+
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51610"
+	onmouseover='document.getElementById("/replays/51610").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51610").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51610'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(18)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51610">MiTH.Trust</a>
+
+	<td width="180">
+
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51610">MuFc</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			8.2
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51610" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+
+				1603</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51606"
+	onmouseover='document.getElementById("/replays/51606").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51606").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51606'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(05)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51606">WF</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51606">A51</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			7.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51606" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				254</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51587"
+	onmouseover='document.getElementById("/replays/51587").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51587").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51587'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(09)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51587">esG</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51587">Decerto</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>RGL
+	<td width="30" style="text-align:center;">
+  			8.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51587" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				101</a>
+			</a>
+        	<td width="85"><center>2011-10-09		<tr class="wide_middle" id="/replays/51586"
+	onmouseover='document.getElementById("/replays/51586").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51586").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51586'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(27)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51586">monkey</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51586">XBOCT+4</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			7.3
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51586" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				962</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51585"
+	onmouseover='document.getElementById("/replays/51585").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51585").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51585'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51585">monkey</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51585">EMC</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			7.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51585" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				648</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51584"
+	onmouseover='document.getElementById("/replays/51584").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51584").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51584'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(25)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51584">M5</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51584">EMC</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			9.1
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51584" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				3230</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51583"
+	onmouseover='document.getElementById("/replays/51583").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51583").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51583'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(56)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51583">DTS</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51583">monkey</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9 finals
+	<td width="30" style="text-align:center;">
+  			8.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51583" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				2999</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51581"
+	onmouseover='document.getElementById("/replays/51581").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51581").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51581'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(98)
+	<td width="180">
+            <b>			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51581">MuFc</a>
+
+	<td width="180">
+            <b>			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51581">Orange.eSports</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<b><div style="float:right;"><img src="design/icons/recommended_rep.gif" title="Recommended replay - a particularly good replay" align="absmiddle"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+
+  			8.5
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51581" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				11413</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51580"
+	onmouseover='document.getElementById("/replays/51580").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51580").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51580'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(28)
+	<td width="180">
+
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51580">MiTH.Trust</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51580">Neolution</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			6.6
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51580" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1603</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51578"
+	onmouseover='document.getElementById("/replays/51578").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51578").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51578'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(179)
+	<td width="180">
+            <b>			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51578">MI.Powercolor</a>
+
+	<td width="180">
+            <b>			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51578">Orange.eSports</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<b><div style="float:right;"><img src="design/icons/recommended_rep.gif" title="Recommended replay - a particularly good replay" align="absmiddle"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.2
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51578" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				9343</a>
+
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51577"
+	onmouseover='document.getElementById("/replays/51577").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51577").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51577'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(03)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51577">Exterminator</a>
+
+	<td width="180">
+
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51577">Fate</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			1.0
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51577" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+
+				250</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51576"
+	onmouseover='document.getElementById("/replays/51576").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51576").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51576'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(17)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51576">MiTH.Trust</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51576">Ritter-ART</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51576" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1421</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51575"
+	onmouseover='document.getElementById("/replays/51575").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51575").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51575'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(01)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51575">Neolution</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51575">OKFR</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			1.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51575" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				320</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51574"
+	onmouseover='document.getElementById("/replays/51574").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51574").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51574'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(15)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51574">Outlaw</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51574">Aeon.SG</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51574" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				947</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51573"
+	onmouseover='document.getElementById("/replays/51573").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51573").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51573'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(32)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51573">MYM.Razer.SG</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51573">E-bomb</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			8.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51573" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				3005</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51572"
+	onmouseover='document.getElementById("/replays/51572").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51572").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51572'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51572">Mixer</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51572">Orange.eSports</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			7.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51572" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				834</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51571"
+	onmouseover='document.getElementById("/replays/51571").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51571").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51571'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(09)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51571">Sukwan</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51571">MuFc</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			7.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51571" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				378</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51570"
+	onmouseover='document.getElementById("/replays/51570").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51570").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51570'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(23)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51570">MI.Powercolor</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51570">Mineski.GRND</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			8.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51570" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				2007</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51568"
+	onmouseover='document.getElementById("/replays/51568").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51568").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51568'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(11)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51568">ez style</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51568">PDI</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			4.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51568" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				440</a>
+			</a>
+        	<td width="85"><center>2011-10-08		<tr class="wide_middle" id="/replays/51566"
+	onmouseover='document.getElementById("/replays/51566").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51566").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51566'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(16)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51566">E-bomb</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51566">EcsJQv</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.1
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51566" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				864</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51565"
+	onmouseover='document.getElementById("/replays/51565").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51565").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51565'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(31)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51565">E-bomb</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51565">Infinity</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			8.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51565" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				986</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51564"
+	onmouseover='document.getElementById("/replays/51564").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51564").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51564'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51564">Sukwan</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51564">EVE</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			5.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51564" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				392</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51563"
+	onmouseover='document.getElementById("/replays/51563").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51563").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51563'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(02)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51563">Sukwan</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51563">OKFR</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			3.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51563" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				174</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51562"
+	onmouseover='document.getElementById("/replays/51562").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51562").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51562'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(02)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51562">JusT</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51562">Neolution</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			1.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51562" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				248</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51561"
+	onmouseover='document.getElementById("/replays/51561").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51561").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51561'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(03)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51561">iDeal.Gigabyte</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51561">Acz</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			4.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51561" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				265</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51560"
+	onmouseover='document.getElementById("/replays/51560").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51560").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51560'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51560">Sukwan</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51560">PMS|Asterisk</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51560" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				357</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51559"
+	onmouseover='document.getElementById("/replays/51559").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51559").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51559'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(09)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51559">OKFR</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51559">PMS|Asterisk</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			5.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51559" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				338</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51558"
+	onmouseover='document.getElementById("/replays/51558").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51558").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51558'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(68)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51558">MYM.Razer.SG</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51558">Acz</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			8.6
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51558" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				4725</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51557"
+	onmouseover='document.getElementById("/replays/51557").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51557").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51557'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(05)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51557">Aeon.SG</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51557">Infinity</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.3
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51557" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				430</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51556"
+	onmouseover='document.getElementById("/replays/51556").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51556").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51556'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(03)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51556">Aeon.SG</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51556">EcsJQv</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			<b>10</b>
+
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51556" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1115</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51531"
+	onmouseover='document.getElementById("/replays/51531").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51531").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51531'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(26)
+	<td width="180">
+
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51531">Neolution.Girls</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51531">PMS|Asterisk</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.6
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51531" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				942</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51530"
+	onmouseover='document.getElementById("/replays/51530").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51530").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51530'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(18)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51530">So</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51530">MuFc</a>
+
+	<td width="135">
+
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			6.8
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51530" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				701</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51529"
+	onmouseover='document.getElementById("/replays/51529").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51529").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51529'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(09)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51529">JusT</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51529">MuFc</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.0
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51529" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				674</a>
+
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51528"
+	onmouseover='document.getElementById("/replays/51528").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51528").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51528'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(18)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51528">MuFc</a>
+
+	<td width="180">
+
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51528">Neolution</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			7.0
+	<td width="65">
+    			<a href="admin/a_replays.php?dl=51528" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+
+				1089</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51527"
+	onmouseover='document.getElementById("/replays/51527").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51527").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51527'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(08)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51527">HBK</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51527">Ritter</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			6.7
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51527" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				631</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51526"
+	onmouseover='document.getElementById("/replays/51526").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51526").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51526'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(16)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51526">Hitler Style</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51526">Bigeye</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			2.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51526" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				182</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51525"
+	onmouseover='document.getElementById("/replays/51525").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51525").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51525'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(23)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51525">Ritter</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51525">Invasion Red</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51525" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1112</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51524"
+	onmouseover='document.getElementById("/replays/51524").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51524").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51524'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(05)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51524">Mixer</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51524">Invasion Red</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			7.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51524" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				342</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51523"
+	onmouseover='document.getElementById("/replays/51523").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51523").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51523'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(05)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51523">HBK</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51523">Mixer</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			2.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51523" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				134</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51522"
+	onmouseover='document.getElementById("/replays/51522").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51522").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51522'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(02)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51522">Eiffete</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51522">Fate</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			5.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51522" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				165</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51521"
+	onmouseover='document.getElementById("/replays/51521").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51521").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51521'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51521">HBK</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51521">Invasion Red</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			4.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51521" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				160</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51520"
+	onmouseover='document.getElementById("/replays/51520").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51520").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51520'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(10)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51520">Orange</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51520">Bigeye</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			6.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51520" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				756</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51519"
+	onmouseover='document.getElementById("/replays/51519").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51519").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51519'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(05)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51519">Bigeye</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51519">MiTH</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			1.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51519" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				281</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51518"
+	onmouseover='document.getElementById("/replays/51518").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51518").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51518'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(43)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51518">Mov. Fo</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51518">MG.Asus</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			7.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51518" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1736</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51517"
+	onmouseover='document.getElementById("/replays/51517").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51517").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51517'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(18)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51517">Hitler Style</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51517">MiTH</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			1.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51517" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				307</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51516"
+	onmouseover='document.getElementById("/replays/51516").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51516").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51516'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(23)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51516">G7</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51516">Exterminator</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51516" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1102</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51515"
+	onmouseover='document.getElementById("/replays/51515").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51515").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51515'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(01)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51515">Mov. Fo</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51515">Exterminator</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			1.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51515" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				145</a>
+			</a>
+        	<td width="85"><center>2011-10-07		<tr class="wide_middle" id="/replays/51514"
+	onmouseover='document.getElementById("/replays/51514").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51514").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51514'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(07)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51514">STK</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51514">777</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>RGL 3
+	<td width="30" style="text-align:center;">
+  			8.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51514" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				292</a>
+			</a>
+        	<td width="85"><center>2011-10-06		<tr class="wide_middle" id="/replays/51513"
+	onmouseover='document.getElementById("/replays/51513").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51513").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51513'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(11)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51513">777</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51513">STK</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>RGL 3
+	<td width="30" style="text-align:center;">
+  			7.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51513" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				283</a>
+			</a>
+        	<td width="85"><center>2011-10-06		<tr class="wide_middle" id="/replays/51512"
+	onmouseover='document.getElementById("/replays/51512").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51512").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51512'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(35)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51512">monkey</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51512">.exe</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			9.1
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51512" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1663</a>
+			</a>
+        	<td width="85"><center>2011-10-06		<tr class="wide_middle" id="/replays/51507"
+	onmouseover='document.getElementById("/replays/51507").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51507").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51507'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(34)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51507">MI.Powercolor</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51507">Eiffete</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51507" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				2524</a>
+			</a>
+        	<td width="85"><center>2011-10-06		<tr class="wide_middle" id="/replays/51506"
+	onmouseover='document.getElementById("/replays/51506").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51506").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51506'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(65)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51506">MI.Powercolor </a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51506">Fate</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			7.1
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51506" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1810</a>
+			</a>
+        	<td width="85"><center>2011-10-06		<tr class="wide_middle" id="/replays/51505"
+	onmouseover='document.getElementById("/replays/51505").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51505").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51505'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(59)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51505">Mineski.GRND</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51505">G7</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			9.4
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51505" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				3833</a>
+			</a>
+        	<td width="85"><center>2011-10-06		<tr class="wide_middle" id="/replays/51503"
+	onmouseover='document.getElementById("/replays/51503").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51503").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51503'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(79)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51503">Hitler Style</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51503">Orange.eSports</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			6.6
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51503" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1659</a>
+			</a>
+        	<td width="85"><center>2011-10-06		<tr class="wide_middle" id="/replays/51502"
+	onmouseover='document.getElementById("/replays/51502").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51502").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51502'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(30)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51502">MiTH.Trust</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51502">Orange.eSports</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ESTC 2011
+	<td width="30" style="text-align:center;">
+  			8.6
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51502" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				5595</a>
+			</a>
+        	<td width="85"><center>2011-10-06		<tr class="wide_middle" id="/replays/51499"
+	onmouseover='document.getElementById("/replays/51499").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51499").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51499'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(11)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51499">H2H</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51499">STK</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>eDL
+	<td width="30" style="text-align:center;">
+  			8.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51499" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				599</a>
+			</a>
+        	<td width="85"><center>2011-10-05		<tr class="wide_middle" id="/replays/51498"
+	onmouseover='document.getElementById("/replays/51498").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51498").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51498'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(08)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51498">STK</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51498">H2H</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>eDL
+	<td width="30" style="text-align:center;">
+  			8.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51498" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				495</a>
+			</a>
+        	<td width="85"><center>2011-10-05		<tr class="wide_middle" id="/replays/51483"
+	onmouseover='document.getElementById("/replays/51483").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51483").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51483'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(24)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51483">PDI</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51483">DIE</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			7.7
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51483" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				868</a>
+			</a>
+        	<td width="85"><center>2011-10-05		<tr class="wide_middle" id="/replays/51482"
+	onmouseover='document.getElementById("/replays/51482").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51482").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51482'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(42)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51482">BK(|</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51482">ez style</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			8.3
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51482" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1038</a>
+			</a>
+        	<td width="85"><center>2011-10-05		<tr class="wide_middle" id="/replays/51481"
+	onmouseover='document.getElementById("/replays/51481").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51481").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51481'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(13)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51481">icon</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51481">KYe</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			7.4
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51481" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				497</a>
+			</a>
+        	<td width="85"><center>2011-10-05		<tr class="wide_middle" id="/replays/51478"
+	onmouseover='document.getElementById("/replays/51478").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51478").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51478'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(15)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51478">Rangers</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51478">FiveStars</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			7.4
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51478" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				547</a>
+			</a>
+        	<td width="85"><center>2011-10-04		<tr class="wide_middle" id="/replays/51476"
+	onmouseover='document.getElementById("/replays/51476").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51476").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51476'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(06)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51476">Virus</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51476">OSI</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			7.3
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51476" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				564</a>
+			</a>
+        	<td width="85"><center>2011-10-04		<tr class="wide_middle" id="/replays/51475"
+	onmouseover='document.getElementById("/replays/51475").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51475").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51475'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(19)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51475">EMC</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51475">F|five|</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			8.3
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51475" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1361</a>
+			</a>
+        	<td width="85"><center>2011-10-04		<tr class="wide_middle" id="/replays/51462"
+	onmouseover='document.getElementById("/replays/51462").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51462").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51462'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(63)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51462">MuFc</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51462">Orange.eSports</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>MGT'11
+	<td width="30" style="text-align:center;">
+  			7.7
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51462" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				4860</a>
+			</a>
+        	<td width="85"><center>2011-10-04		<tr class="wide_middle" id="/replays/51438"
+	onmouseover='document.getElementById("/replays/51438").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51438").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51438'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(40)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51438">GC</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51438">CC</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			6.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51438" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				799</a>
+			</a>
+        	<td width="85"><center>2011-10-04		<tr class="wide_middle" id="/replays/51437"
+	onmouseover='document.getElementById("/replays/51437").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51437").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51437'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(12)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51437">EMC</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51437">HT</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9
+	<td width="30" style="text-align:center;">
+  			8.6
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51437" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				742</a>
+			</a>
+        	<td width="85"><center>2011-10-03		<tr class="wide_middle" id="/replays/51436"
+	onmouseover='document.getElementById("/replays/51436").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51436").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51436'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(20)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51436">.exe</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51436">Rangers</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>PL XV
+	<td width="30" style="text-align:center;">
+  			8.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51436" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				676</a>
+			</a>
+        	<td width="85"><center>2011-10-03		<tr class="wide_middle" id="/replays/51434"
+	onmouseover='document.getElementById("/replays/51434").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51434").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51434'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(15)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51434">HT</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51434">EMC</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9
+	<td width="30" style="text-align:center;">
+  			8.7
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51434" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				1053</a>
+			</a>
+        	<td width="85"><center>2011-10-03		<tr class="wide_middle" id="/replays/51433"
+	onmouseover='document.getElementById("/replays/51433").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51433").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51433'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(10)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51433">MassPro</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51433">Decerto</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>RGL 3
+	<td width="30" style="text-align:center;">
+  			5.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51433" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				185</a>
+			</a>
+        	<td width="85"><center>2011-10-03		<tr class="wide_middle" id="/replays/51432"
+	onmouseover='document.getElementById("/replays/51432").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51432").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51432'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(14)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51432">Decerto</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51432">MassPro</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>RGL 3
+	<td width="30" style="text-align:center;">
+  			7.8
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51432" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				475</a>
+			</a>
+        	<td width="85"><center>2011-10-03		<tr class="wide_middle" id="/replays/51431"
+	onmouseover='document.getElementById("/replays/51431").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51431").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51431'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(29)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51431">GGnet</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51431">monkey</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9
+	<td width="30" style="text-align:center;">
+  			8.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51431" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				2879</a>
+			</a>
+        	<td width="85"><center>2011-10-03		<tr class="wide_middle" id="/replays/51430"
+	onmouseover='document.getElementById("/replays/51430").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51430").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51430'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(17)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51430">monkey</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51430">GGnet</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9
+	<td width="30" style="text-align:center;">
+  			9.0
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51430" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				2553</a>
+			</a>
+        	<td width="85"><center>2011-10-03		<tr class="wide_middle" id="/replays/51397"
+	onmouseover='document.getElementById("/replays/51397").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51397").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51397'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(47)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51397">A51</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51397">uE</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ROCCAT DotA..
+	<td width="30" style="text-align:center;">
+  			7.7
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51397" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				961</a>
+			</a>
+        	<td width="85"><center>2011-10-03		<tr class="wide_middle" id="/replays/51396"
+	onmouseover='document.getElementById("/replays/51396").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51396").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51396'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(16)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51396">Th3_0n3</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51396">KingT_S</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>GGSC #2
+	<td width="30" style="text-align:center;">
+  			7.4
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51396" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				386</a>
+			</a>
+        	<td width="85"><center>2011-10-02		<tr class="wide_middle" id="/replays/51395"
+	onmouseover='document.getElementById("/replays/51395").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51395").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51395'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(34)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51395">GGnet</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51395">M5</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9
+	<td width="30" style="text-align:center;">
+  			8.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51395" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				5306</a>
+			</a>
+        	<td width="85"><center>2011-10-02		<tr class="wide_middle" id="/replays/51394"
+	onmouseover='document.getElementById("/replays/51394").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51394").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51394'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(44)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51394">M5</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51394">GGnet</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>ICS 9
+	<td width="30" style="text-align:center;">
+  			8.3
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51394" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				6015</a>
+			</a>
+        	<td width="85"><center>2011-10-02		<tr class="wide_middle" id="/replays/51393"
+	onmouseover='document.getElementById("/replays/51393").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51393").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51393'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(09)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51393">BIP</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51393">STK</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>RGL 3
+	<td width="30" style="text-align:center;">
+  			8.2
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51393" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				405</a>
+			</a>
+        	<td width="85"><center>2011-10-02		<tr class="wide_middle" id="/replays/51392"
+	onmouseover='document.getElementById("/replays/51392").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51392").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51392'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(01)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51392">STK</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51392">BIP</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>RGL 3
+	<td width="30" style="text-align:center;">
+  			5.5
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51392" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				110</a>
+			</a>
+        	<td width="85"><center>2011-10-02		<tr class="wide_middle" id="/replays/51388"
+	onmouseover='document.getElementById("/replays/51388").className = "wide_middle_hover";'
+	onmouseout='document.getElementById("/replays/51388").className = "wide_middle";'
+	 
+			
+			onClick="window.location = 'replays/51388'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+	<td><center>
+
+			            <font style="font-size:11px;">(16)
+	<td width="180">
+            			<img src=/design/icons/sentinel.gif style='vertical-align: text-top' border=0 title="Sentinel">		    <a href="replays/51388">NN</a>
+
+	<td width="180">
+            			<img src=/design/icons/scourge.gif style='vertical-align: text-top' border=0 title="Scourge">		    <a href="replays/51388">DCcom</a>
+
+	<td width="135">
+	   		v6.72f
+ 	<td width="120">
+    		<div style="float:right;"></div>RGL 3
+	<td width="30" style="text-align:center;">
+  			5.6
+	<td width="65">
+
+    			<a href="admin/a_replays.php?dl=51388" title="Download replay"><img src="/design/icons/dl3.gif" align="absbottom" border="0">
+				231</a>
+			</a>
+        	<td width="85"><center>2011-10-02	</table>
+	
+	<tr><td width=800 valign=middle class=wide_top_alt style="padding-left:40px;"><span class="nav_tree_current">Paging</span></td></tr>
+	<tr><td width="800"  class="wide_middle" STYLE="padding-left:10px;padding-top:2px;padding-bottom:3px;">
+	     	<b>1</b>, <a href="replays.php?&amp;start=100">2</a>, <a href="replays.php?&amp;start=200">3</a>...<a href="replays.php?&amp;start=9100">92</a>, <a href="replays.php?&amp;start=9200">93</a>, <a href="replays.php?&amp;start=9300">94</a>&nbsp;<a href="replays.php?&amp;start=100"><span align="right"><img src='/bilder/silk/arrow_right.png' title='' alt='' border=0 style='vertical-align: bottom'></a> <a href='javascript:void(0);' onClick="Effect.toggle('gotopageform', 'appear');"><img src='/bilder/silk/application_form_edit.png' title='Go to page by entering the number of the page you want to reach' alt='Go to page by entering the number of the page you want to reach' border=0 style='vertical-align: bottom'></a><form action='' method='post' style='display:none;padding-top:5px;margin:0;' id='gotopageform'> Go to page: <input type='text' name='page' size=4 onKeyUp="$('gotopageform').action = 'replays.php?' + '&start=' + ((this.value  * 100) - 100);"><input type='submit' value='Go'></form>
+
+     
+	 <tr>
+	<td height="20" class="wide_bottom"  valign="middle" width="800" height="20">&nbsp;</td></table>
+
+	<div id="footer">
+	
+
+<div class="main_box">
+
+	<div class="main_top">
+
+		&nbsp;
+
+	</div>
+
+	<div class="main_middle">
+
+		
+			 	<div id="footer_extremetracking">
+
+		        <a href="http://extremetracking.com/open?login=ggnet20"
+		        target="_top"> <img src="http://t1.extreme-dm.com/i.gif"
+		        name="EXim" border="0" height="38" width="41"
+		        alt="eXTReMe Tracker"></img></a>
+		        <script type="text/javascript" language="javascript1.2"><!--
+		        EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+		        EXb=EXs.colorDepth:EXb=EXs.pixelDepth;//-->
+		        </script><script type="text/javascript"><!--
+		        var EXlogin='ggnet20' // Login
+		        var EXvsrv='s9' // VServer
+		        navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+		        EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+		        EXd.write("<img src=http://e0.extreme-dm.com",
+		        "/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+		        "jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+		        "l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+		        </script><noscript><img height="1" width="1" alt=""
+		        src="http://e0.extreme-dm.com/s9.g?login=ggnet20&amp;j=n&amp;jv=n"/>
+		        </noscript></center>
+
+			</div>
+
+
+		    <div id="footer_text">
+
+		    	© GosuGamers 2002-2010. Succession v4.1. Page generated in: 0.013s.
+
+		    </div>
+
+
+		    <div id="footer_links">
+		    	<a href="about/crew">About</a>
+		                &nbsp; <a href="http://sc.gosugamers.net/about/subscribe">Subscribe</a>
+
+		            &nbsp; <a href="about/workwithus">Work with us</a>
+		        &nbsp; <a href="about/support">Support</a>
+		        &nbsp; <a href="fact/5">Advertise</a>
+		       	&nbsp; <a href="fact/115">FAQ</a>
+                <div style="margin-top: 5px">
+
+                    <a href="http://www.adminor.net/">Our hosting company</a>
+                </div>
+		     </div>
+
+
+
+			<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+			var pageTracker = _gat._getTracker("UA-341903-1");
+			pageTracker._initData();
+			pageTracker._trackPageview();
+			</script>
+
+		
+
+	</div>
+
+	<div class="main_bottom">
+
+		&nbsp;
+
+	</div>
+
+</div>
+
+
+	<script language="javascript">
+	setInterval("upclock()",1000);
+	</script>
+
+
+</div>
+</div>
+	<div id="last">
+
+	
+<div class="last_box" id="box_advertisement">
+ 
+    <div class="last_top">
+    		
+    	<h2>Advertisement</h2>
+
+	</div>
+
+    
+	<div class="last_middle">
+    
+		<center><!-- ca-pub-7300738326446560/Box -->
+<script type='text/javascript'>
+GA_googleFillSlot("Box");
+</script></center>    
+    </div>
+    
+    <div class="last_bottom">
+    
+    	&nbsp;
+    	
+    </div>
+    
+</div>
+		
+<div class="last_box" id="box_advertisement">
+
+ 
+    <div class="last_top">
+    		
+    	<h2>Advertisement</h2>
+
+	</div>
+    
+	<div class="last_middle">
+    
+		<center><!-- ca-pub-7300738326446560/Box --><br />
+<script type='text/javascript'><br />
+GA_googleFillSlot("Box");<br />
+</script></center></b>    
+    </div>
+    
+    <div class="last_bottom">
+
+    
+    	&nbsp;
+    	
+    </div>
+    
+</div>	</div>
+</div> <div id="extraDiv1"></div>
+<div id="extraDiv2"></div>
+<div id="extraDiv3"></div>
+<div id="extraDiv4"></div>
+</div> </body>
+</html>

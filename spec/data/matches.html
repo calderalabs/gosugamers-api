@@ -1,0 +1,1986 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+	<head>
+
+	
+	<title>GosuGamers DotA | GosuBet</title>
+
+	<base href="http://gosugamers.net/dota/">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	
+		<meta name="description" content="GosuGamers is the main source for StarCraft, WarCraft and DotA news. GosuBets, patches, interviews, features, events and coverages of the gaming scene.">
+
+		<meta name="keywords" content="starcraft, warcraft, gosu, gamers, starcraft 2, replays, gaming, cyber, battle, blizzard, dota, defense of the ancients">
+		<meta name="author" content="GosuGamers">
+		<link rel="alternate" type="application/xml" title="Global RSS" href="http://gosugamers.net/all.rss" />
+		<link rel="alternate" type="application/xml" title="Section RSS" href="http://gosugamers.net/gosugamers.rss" />
+
+	
+	
+		<meta name="robots" content="index,follow">
+
+	
+
+	<link rel="icon" href="http://www.gosugamers.net/images/favicon.ico" type="image/x-icon">
+
+	<link rel="shortcut icon" href="http://www.gosugamers.net/images/favicon.ico" >
+
+        <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.6.0.2/prototype.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.8.1/scriptaculous.js?load=effects,dragdrop,slider" type="text/javascript"></script>
+    
+	<script language="javascript" src="/include/javascript/showlists.js"></script>
+
+	<script type="text/javascript" src="/include/javascript/xmlhttp.js"></script>
+	<script type="text/javascript" src="/include/javascript/memb_cust.js"></script>
+
+        <script language="javascript" type="text/javascript">
+        var c = new Date();
+        var clocktime = 1000 * (1318151309 + 60*c.getTimezoneOffset()); //utc, by tricking Date
+
+        
+            var cettimezone = 2; // CEST = Central European Summer Time, UTC+2
+            var esttimezone = -4; // EDT = Eastern Daylight Time, UTC-4
+            var psttimezone = -7; // PDT = Pacific Daylight Time, UTC-7
+
+        
+        var ksttimezone = 9; // KST, Korea Standard Time, UTC+9, not affected by daylight savings
+
+        // Takeover ad adjustment.
+        Event.observe(window, 'load', function() {
+            if ($$('#takeover div').length !== 0) {
+            	new Effect.Tween('wrapper', 0, 150, function(p) {
+                    $('wrapper').style.marginTop = p + 'px';
+            	});
+            }
+        });
+        </script>
+
+	<script type="text/javascript" src="/include/javascript/clock.js"></script>
+
+	<LINK rel="stylesheet" type="text/css" href="skins/addons/general.css"><LINK rel="stylesheet" type="text/css" href="skins/css/skin_58_v73.css">
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-7300738326446560");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleAddSlot("ca-pub-7300738326446560", "Babyskyscraper");
+GA_googleAddSlot("ca-pub-7300738326446560", "Box");
+GA_googleAddSlot("ca-pub-7300738326446560", "headline-prime");
+GA_googleAddSlot("ca-pub-7300738326446560", "Leaderboard");
+GA_googleAddSlot("ca-pub-7300738326446560", "Skyscraper");
+GA_googleAddSlot("ca-pub-7300738326446560", "Takeover");
+</script>
+<script type='text/javascript'>
+GA_googleFetchAds();
+
+</script>
+<style>
+#takeover {
+    background: #000;
+    position: fixed;
+    left: 50%;
+    margin-left: -1000px;
+    top: 35px;
+    width: 2000px;
+}
+</style>
+</head>
+
+
+<body>
+
+<div id="takeover">
+    	<script type='text/javascript'>
+	    GA_googleFillSlot("Takeover");
+	</script>
+    </div>
+
+<div id="wrapper">
+
+	<div class="main_box" id="upper_advertisement">
+
+		<div class="main_top">
+
+			Advertisement
+
+		</div>
+
+		<div class="main_middle">
+
+			<!-- Leaderboard -->
+<script type='text/javascript'>
+GA_googleFillSlot("Leaderboard");
+</script>
+
+		</div>
+
+		<div class="main_bottom">
+
+			&nbsp;
+
+		</div>
+
+	</div>
+
+	<div id="header" class="cf" style="position:relative">
+
+		<div id="logo" onClick="window.location = 'http://www.gosugamers.net'" style="cursor:pointer;">
+
+		</div>
+
+    	<div class="header_slice" id="header_slice_top">
+
+    		<div class="flags">
+
+				<label>Language:</label>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=en"><img align="absmiddle" src="/bilder/flags_long/United Kingdom.gif" border="0" ></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=sv"><img align="absmiddle" src="/bilder/flags_long/Sweden.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=de"><img align="absmiddle" src="/bilder/flags_long/Germany.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=es"><img align="absmiddle" src="/bilder/flags_long/Spain.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=ru"><img align="absmiddle" src="/bilder/flags_long/Russia.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=kr"><img align="absmiddle" src="/bilder/flags_long/Korea.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=cn"><img align="absmiddle" src="/bilder/flags_long/China.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=pt"><img align="absmiddle" src="/bilder/flags_long/Portugal.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=pl"><img align="absmiddle" src="/bilder/flags_long/Poland.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+					<a href="admin/a_languages.php?action=switch&lang=fr"><img align="absmiddle" src="/bilder/flags_long/France.gif" border="0"  style="opacity:0.4; filter: alpha(opacity = 40)"></a>
+
+				
+    		</div>
+
+		</div>
+
+			<div id="header_mid">
+
+			    <div id="site_name">
+
+			    	GosuGamers
+			    </div>
+
+			    <div id="slogan">
+
+			    	Your main source
+
+			    </div>
+
+			    <div id="game_buttons">
+
+					
+					<div class="game_button ">
+
+						
+						<div class="game_button_area">
+
+							<a href="/poker">Poker</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						
+						<div class="game_button_area">
+
+							<a href="/diablo">Diablo 3</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="http://www.gosugamers.net/wow/images/site/wowtroll.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/wow'">
+						<div class="game_button_area">
+
+							<a href="/wow">WoW</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="http://www.gosugamers.net/starcraft/images/skins/honlogo-39x35.png" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/hon'">
+						<div class="game_button_area">
+
+							<a href="/hon">HoN</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						
+						<div class="game_button_area">
+
+							<a href="/dota2">Dota 2</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button game_button_selected">
+
+						<img src="skins/tribute/dota2.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/dota'">
+						<div class="game_button_area">
+
+							<a href="/dota">DotA</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="skins/tribute/orceye.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/warcraft'">
+						<div class="game_button_area">
+
+							<a href="/warcraft">WarCraft 3</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="http://www.gosugamers.net/starcraft2/skins/tribute/sc2zeratul.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/starcraft2'">
+						<div class="game_button_area">
+
+							<a href="/starcraft2">StarCraft 2</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="skins/tribute/hydralisk.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/starcraft'">
+						<div class="game_button_area">
+
+							<a href="/starcraft">StarCraft</a>
+
+						</div>
+
+					</div>
+
+					
+					<div class="game_button ">
+
+						<img src="http://www.gosugamers.net/general/images/skins/general_icon.jpg" style="float:left; cursor:pointer;" onClick="window.location = 'http://www.gosugamers.net/general'">
+						<div class="game_button_area">
+
+							<a href="/general">Home</a>
+
+						</div>
+
+					</div>
+
+					
+				</div>
+
+		</div>
+
+		<div class="header_slice"  id="header_slice_bottom">
+
+			<div class="time" onmouseover="this.className='time_hover time'" onmouseout="this.className='time'">
+
+				<span id="people_online">
+
+					Online: 3,958
+				</span>
+
+				<b><span title="Central European Time (CET)" id="clock">&nbsp;</span></b> CET
+
+				<!-- <span title="Pacific Standard Time (PST)" id="pstclock">&nbsp;</span> PST
+
+				<span title="Eastern Standard  Time (EST)" id="estclock">&nbsp;</span> EST
+
+				<span title="Korea Standard Time" id="kstclock">&nbsp;</span> KST -->
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+
+<div id="content" style="position:relative">
+
+	<div id="first">
+
+		
+	<div class="first_box" id="box_membership">
+
+		<div class="first_top">
+
+			<h2>Membership</h2>
+
+		</div>
+
+		<div class="first_middle">
+
+	    	<div id="login_form">
+
+			    <form name="login" action="admin/a_members.php" method="POST" style="display:inline;">
+			    <input type="hidden" name="action" value="login">
+
+			    <div>
+
+			    <input type="text" name="username"
+
+					value="Username"
+						onFocus="if(this.value == 'Username'){ this.value = '' }">
+
+				</div>
+
+			    <div>
+
+			   		<input type="password" name="losen" value="Password" onFocus="if(this.value == 'Password'){ this.value = ''}">
+
+			    </div>
+
+			    <div>
+
+			 	   <input type="checkbox" name="autologin" checked>
+
+				   Autologin
+
+				</div>
+
+				<div>
+
+				<input type=submit value="Log in" class="inputspecial">
+
+				</div>
+
+				<div id="register">
+
+			    	<a href="register.php">Create an account</a>
+
+			    </div>
+			    </form>
+
+
+
+			   <div>
+
+			    	<a href="recover_password/">Forgot password?</a>
+
+			    </div>
+
+			   </div>
+
+		</div>
+
+		<div class="first_bottom">
+
+			&nbsp;
+
+		</div>
+
+	</div>
+
+
+
+<div class="first_box" id="box_navigation">
+	
+	<div class="first_top">
+	
+		<h2>Navigation</h2>
+	
+	</div>
+	
+	<div class="first_middle">
+	
+			
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'news'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="n"  title="News (Hotkey: Alt-Shift-n)"  href="news">News</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'replays/'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="r"  title="Replays (Hotkey: Alt-Shift-r)"  href="replays/">Replays</a>
+
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'forum'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="f"  title="Forum (Hotkey: Alt-Shift-f)"  href="forum">Forum</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut navbarbut_hover"
+				
+				onClick="window.location = 'gosubet'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut navbarbut_hover'">
+			 
+				<div class="navbarbut_icon">
+
+					
+									
+				</div>
+				
+								
+				 <a accesskey="g"  title="GosuBet (Hotkey: Alt-Shift-g)"  href="gosubet">GosuBet</a>
+				 
+			</div>
+			
+			
+		<ul>		
+			<li>
+			
+				<a href="gosubet">GosuBet overview</a>
+				
+			</li>
+						
+		<ul></ul>		
+			<li>
+
+			
+				<a href="gosubet/results">Recent results</a>
+				
+			</li>
+						
+				
+			<li>
+			
+				<a href="gosubet/suggest_a_match/">Suggest a match</a>
+				
+			</li>
+						
+				
+			<li>
+			
+				<a href="gosubet/highscore">Highscore</a>
+
+				
+			</li>
+						
+				
+			<li>
+			
+				<a href="gosubet/top/">Top betters</a>
+				
+			</li>
+						
+				
+			<li>
+			
+				<a href="events">Events</a>
+				
+			</li>
+						
+		</ul>		
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'facts.php?id=213'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey=""  href="facts.php?id=213">GosuCup #4</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'rankings'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="k"  title="Rankings (Hotkey: Alt-Shift-k)"  href="rankings">Rankings</a>
+
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'blogs'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+					
+									
+				</div>
+				
+								
+				 <a accesskey="b"  title="Blogs (Hotkey: Alt-Shift-b)"  href="blogs">Blogs</a>
+				 
+			</div>
+			
+			
+				
+		
+			<div class="navbarbut "
+				
+				onClick="window.location = 'teamgg'"
+				
+				onmouseover="this.className = 'navbarbut navbarbut_hover'"
+				
+				onmouseout="this.className = 'navbarbut '">
+			 
+				<div class="navbarbut_icon">
+
+					
+									
+				</div>
+				
+								
+				 <a accesskey=""  href="teamgg">Team GG</a>
+				 
+			</div>
+			
+			
+				
+	</div>
+	 
+ </div>
+<div class="last_box" id="box_advertisement">
+ 
+    <div class="last_top">
+    		
+    	<h2>Advertisement</h2>
+
+	</div>
+    
+	<div class="last_middle">
+    
+		<center><!-- ca-pub-7300738326446560/Skyscraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("Skyscraper");
+</script></center>    
+    </div>
+    
+    <div class="last_bottom">
+    
+    	&nbsp;
+    	
+    </div>
+    
+
+</div>
+<div class="last_box" id="box_advertisement">
+ 
+    <div class="last_top">
+    		
+    	<h2>Advertisement</h2>
+
+	</div>
+    
+	<div class="last_middle">
+    
+		<center><!-- ca-pub-7300738326446560/Babyskyscraper -->
+<script type='text/javascript'>
+GA_googleFillSlot("Babyskyscraper");
+</script></center>    
+    </div>
+
+    
+    <div class="last_bottom">
+    
+    	&nbsp;
+    	
+    </div>
+    
+</div>
+<div class="first_box" id="box_search">
+	
+	<div class="first_top">
+	
+		<h2><img src='/bilder/silk/magnifier.png' title='' alt='' border=0 style='vertical-align: bottom'> Search</h2>
+	
+	</div>
+
+	
+	<div class="first_middle">
+	
+		<form action="search.php" method="get" style="display:inline;">
+			
+		
+				<div style="padding:2px;">
+				
+				
+					<div id="box_search_keyword" style="margin-bottom:3px;">
+				
+						<input accesskey="e" size="21" type="input" value="Keyword..." name="Skeyword" onClick="if(this.value == 'Keyword...'){ this.value = ''; }" onFocus="if(this.value == 'Keyword...'){ this.value = ''; }">
+						
+					</div>
+					
+					
+					<div style="float:right; padding-right:5px;//padding-right: 7px" id="box_search_submit">
+					
+						<input type="submit" value="Search">
+						
+					</div>
+
+					
+					
+					<div style="float:left;" id="box_search_select">
+					
+						<select name="i">
+						
+							<option value="members" >Members</option>
+							<option value="news" >News</option>
+							<option value="forum" >Forum</option>
+							<option value="features" >Features</option>
+							<option value="rankings" >Rankings</option>
+
+							
+						</select>
+					
+					</div>
+					
+					
+					<div style="clear:both;"></div>
+					
+					
+				</div>
+			
+			
+		</form>
+		
+	</div>
+		
+	<div class="first_bottom">
+	
+		&nbsp;
+		
+	</div>
+
+	
+</div>
+			
+
+<div class="clear"></div>
+
+	</div>
+
+	<div id="cont">
+
+		
+				
+		
+					
+				<table border="0"  width="500" cellpadding="0" cellspacing="0">
+				<tr><td class="cont_top">
+			
+					<a href="gosubet/">GosuBet</a> \ 
+					
+					<span class="nav_tree_current">
+
+						Started GosuBets					</span>	
+					
+				</td><tr><td>     	
+						
+				<table cellspacing=0 cellpadding=3 class=multitable 0><tr class='cont_top_alt'><td title=""  class='cont_top_alt'><a href='/match.php?id=&order=antal_kom'>Com</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=p1'>Player 1</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=winner'>vs</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=p2'>Player 2</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=event_ref_id'>Event</a></u> 	<tr class="cont_middle" id="/gosubet/107551"
+	onmouseover='document.getElementById("/gosubet/107551").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107551").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107551'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+
+         						<td width="35" style="text-align:center;">(30)
+		         				<td width="165">
+
+								
+		         				<img src="/bilder/flags_long/Malaysia.gif" title="Malaysia" border=0 style='vertical-align: sub'>		         												<a href="gosubet/107551" style="text-decoration:none;">						
+		         				Orange</A></B>
+		         						         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107551" style="text-decoration:none;">	
+		         				vs								</A>
+		         				<td width="165">
+		         							<img src="/bilder/flags_long/Thailand.gif" title="Thailand" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107551" style="text-decoration:none;">
+		         						         				Neolution</A>
+
+		         				</b>
+		         							<td width="80">
+		    » <a href="events/1495">ESTC '11</a>     				
+				<tr class="cont_middle" id="/gosubet/107578"
+	onmouseover='document.getElementById("/gosubet/107578").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107578").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107578'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+
+         						<td width="35" style="text-align:center;">(40)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Ukraine.gif" title="Ukraine" border=0 style='vertical-align: sub'>		         												<a href="gosubet/107578" style="text-decoration:none;">						
+		         				DTS</A></B>
+
+		         						         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107578" style="text-decoration:none;">	
+		         				vs								</A>
+		         				<td width="165">
+		         							<img src="/bilder/flags_long/Russia.gif" title="Russia" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107578" style="text-decoration:none;">
+		         						         				M5</A>
+		         				</b>
+		         							<td width="80">
+
+		    » <a href="events/1465">ICS 9</a>     				
+			</table>				<tr><td class="cont_bottom">&nbsp;</table>
+				<br>
+				
+				
+			
+				
+		
+					
+				<table border="0"  width="500" cellpadding="0" cellspacing="0">
+				<tr><td class="cont_top">
+			
+					<a href="gosubet/">GosuBet</a> \ 
+					
+					<span class="nav_tree_current">
+
+						Upcoming matches					</span>	
+					
+				</td><tr><td>     	
+						
+				<table cellspacing=0 cellpadding=3 class=multitable 0><tr class='cont_top_alt'><td title=""  class='cont_top_alt'><a href='/match.php?id=&order=antal_kom'>Com</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=p1'>Player 1</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=p2'>Player 2</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=total_bets'>Bets</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=match_start'>ETA</a></u> <tr><td height=20 class='cont_middle_alt' align=right width=500 colspan=6 style="padding-left:40px;border-bottom:1px solid black;">Sunday (2011-10-09)	<tr class="cont_middle" id="/gosubet/107580"
+	onmouseover='document.getElementById("/gosubet/107580").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107580").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107580'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(12)</center></td>
+
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Ukraine.gif" title="Ukraine" border=0 style='vertical-align: sub'>								<a href="gosubet/107580" style="text-decoration:none;">						
+		         				XBOCT+4</A>
+		         				(50%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+		         				
+		         				<img src="/bilder/flags_long/Denmark.gif" title="Denmark" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107580" style="text-decoration:none;">
+		         				monkey</A>
+		         				(50%)
+		         				
+							<td width="30" style="text-align:center;">
+
+							170							<td width="50" style="text-align:center;">
+							1h 51m	<tr class="cont_middle" id="/gosubet/107496"
+	onmouseover='document.getElementById("/gosubet/107496").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107496").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107496'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(02)</center></td>
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Europe.gif" title="Europe" border=0 style='vertical-align: sub'>								<a href="gosubet/107496" style="text-decoration:none;">						
+		         				STK</A>
+		         				(27%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+
+		         				
+		         				<img src="/bilder/flags_long/Bulgaria.gif" title="Bulgaria" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107496" style="text-decoration:none;">
+		         				esG</A>
+		         				(73%)
+		         				
+							<td width="30" style="text-align:center;">
+							11							<td width="50" style="text-align:center;">
+							7h 51m	<tr class="cont_middle" id="/gosubet/106917"
+	onmouseover='document.getElementById("/gosubet/106917").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106917").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106917'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(12)</center></td>
+
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Germany.gif" title="Germany" border=0 style='vertical-align: sub'>								<a href="gosubet/106917" style="text-decoration:none;">						
+		         				.exe</A>
+		         				(85%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+		         				
+		         				<img src="/bilder/flags_long/Egypt.gif" title="Egypt" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106917" style="text-decoration:none;">
+		         				[CC]</A>
+		         				(15%)
+		         				
+							<td width="30" style="text-align:center;">
+
+							26							<td width="50" style="text-align:center;">
+							8h 51m	<tr class="cont_middle" id="/gosubet/106922"
+	onmouseover='document.getElementById("/gosubet/106922").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106922").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106922'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(15)</center></td>
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Brazil.gif" title="Brazil" border=0 style='vertical-align: sub'>								<a href="gosubet/106922" style="text-decoration:none;">						
+		         				uE</A>
+		         				(80%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+
+		         				
+		         				<img src="/bilder/flags_long/Argentina.gif" title="Argentina" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106922" style="text-decoration:none;">
+		         				LOST.ar</A>
+		         				(20%)
+		         				
+							<td width="30" style="text-align:center;">
+							24							<td width="50" style="text-align:center;">
+							8h 51m	<tr class="cont_middle" id="/gosubet/106924"
+	onmouseover='document.getElementById("/gosubet/106924").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106924").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106924'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(10)</center></td>
+
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Malaysia.gif" title="Malaysia" border=0 style='vertical-align: sub'>								<a href="gosubet/106924" style="text-decoration:none;">						
+		         				Mufc</A>
+		         				(52%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+		         				
+		         				<img src="/bilder/flags_long/Vietnam.gif" title="Vietnam" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106924" style="text-decoration:none;">
+		         				SkyNet</A>
+		         				(48%)
+		         				
+							<td width="30" style="text-align:center;">
+
+							52							<td width="50" style="text-align:center;">
+							8h 51m	<tr class="cont_middle" id="/gosubet/106925"
+	onmouseover='document.getElementById("/gosubet/106925").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106925").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106925'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(03)</center></td>
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/United States.gif" title="United States" border=0 style='vertical-align: sub'>								<a href="gosubet/106925" style="text-decoration:none;">						
+		         				RGC.AGL</A>
+		         				(77%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+
+		         				
+		         				<img src="/bilder/flags_long/Malaysia.gif" title="Malaysia" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106925" style="text-decoration:none;">
+		         				Noble</A>
+		         				(23%)
+		         				
+							<td width="30" style="text-align:center;">
+							9							<td width="50" style="text-align:center;">
+							8h 51m	<tr class="cont_middle" id="/gosubet/106932"
+	onmouseover='document.getElementById("/gosubet/106932").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106932").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106932'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(03)</center></td>
+
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Russia.gif" title="Russia" border=0 style='vertical-align: sub'>								<a href="gosubet/106932" style="text-decoration:none;">						
+		         				OSI</A>
+		         				(65%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+		         				
+		         				<img src="/bilder/flags_long/Turkey.gif" title="Turkey" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106932" style="text-decoration:none;">
+		         				Kye</A>
+		         				(35%)
+		         				
+							<td width="30" style="text-align:center;">
+
+							11							<td width="50" style="text-align:center;">
+							8h 51m	<tr class="cont_middle" id="/gosubet/106939"
+	onmouseover='document.getElementById("/gosubet/106939").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106939").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106939'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(02)</center></td>
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Sweden.gif" title="Sweden" border=0 style='vertical-align: sub'>								<a href="gosubet/106939" style="text-decoration:none;">						
+		         				Rangers</A>
+		         				(45%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+
+		         				
+		         				<img src="/bilder/flags_long/Bulgaria.gif" title="Bulgaria" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106939" style="text-decoration:none;">
+		         				S4M</A>
+		         				(55%)
+		         				
+							<td width="30" style="text-align:center;">
+							5							<td width="50" style="text-align:center;">
+							8h 51m	<tr class="cont_middle" id="/gosubet/106945"
+	onmouseover='document.getElementById("/gosubet/106945").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106945").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106945'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(05)</center></td>
+
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Greece.gif" title="Greece" border=0 style='vertical-align: sub'>								<a href="gosubet/106945" style="text-decoration:none;">						
+		         				F|five|</A>
+		         				(14%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+		         				
+		         				<img src="/bilder/flags_long/Europe.gif" title="Europe" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106945" style="text-decoration:none;">
+		         				CC</A>
+		         				(86%)
+		         				
+							<td width="30" style="text-align:center;">
+
+							12							<td width="50" style="text-align:center;">
+							8h 51m	<tr class="cont_middle" id="/gosubet/106933"
+	onmouseover='document.getElementById("/gosubet/106933").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106933").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106933'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(02)</center></td>
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/France.gif" title="France" border=0 style='vertical-align: sub'>								<a href="gosubet/106933" style="text-decoration:none;">						
+		         				Virus</A>
+		         				(81%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+
+		         				
+		         				<img src="/bilder/flags_long/Greece.gif" title="Greece" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106933" style="text-decoration:none;">
+		         				icon</A>
+		         				(19%)
+		         				
+							<td width="30" style="text-align:center;">
+							11							<td width="50" style="text-align:center;">
+							9h 51m<tr><td height=20 class='cont_middle_alt' align=right width=500 colspan=6 style="padding-left:40px;border-bottom:1px solid black;">Monday (2011-10-10)	<tr class="cont_middle" id="/gosubet/106921"
+	onmouseover='document.getElementById("/gosubet/106921").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106921").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106921'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(06)</center></td>
+
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Argentina.gif" title="Argentina" border=0 style='vertical-align: sub'>								<a href="gosubet/106921" style="text-decoration:none;">						
+		         				BK(|</A>
+		         				(100%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+		         				
+		         				<img src="/bilder/flags_long/Canada.gif" title="Canada" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106921" style="text-decoration:none;">
+		         				DIE</A>
+		         				(0%)
+		         				
+							<td width="30" style="text-align:center;">
+
+							11							<td width="50" style="text-align:center;">
+							14h 51m	<tr class="cont_middle" id="/gosubet/106944"
+	onmouseover='document.getElementById("/gosubet/106944").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106944").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106944'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(03)</center></td>
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Sweden.gif" title="Sweden" border=0 style='vertical-align: sub'>								<a href="gosubet/106944" style="text-decoration:none;">						
+		         				EMC</A>
+		         				(0%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+
+		         				
+		         				<img src="/bilder/flags_long/Macedonia.gif" title="Macedonia" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106944" style="text-decoration:none;">
+		         				GC</A>
+		         				(100%)
+		         				
+							<td width="30" style="text-align:center;">
+							1							<td width="50" style="text-align:center;">
+							32h 51m	<tr class="cont_middle" id="/gosubet/106938"
+	onmouseover='document.getElementById("/gosubet/106938").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106938").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106938'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+         						<td width="25" style="text-align:center;//padding-left:8px;"><center>(01)</center></td>
+
+		         				<td width="165" style="padding:5px;">
+								
+		         				<img src="/bilder/flags_long/Russia.gif" title="Russia" border=0 style='vertical-align: sub'>								<a href="gosubet/106938" style="text-decoration:none;">						
+		         				FiveStars</A>
+		         				(57%) 
+		         				
+		         				<td width="165" style="padding:5px;">
+		         				
+		         				<img src="/bilder/flags_long/Germany.gif" title="Germany" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106938" style="text-decoration:none;">
+		         				PANZER</A>
+		         				(43%)
+		         				
+							<td width="30" style="text-align:center;">
+
+							11							<td width="50" style="text-align:center;">
+							33h 51m<tr><td height=20 class='cont_middle_alt' align=right width=500 colspan=6 style="padding-left:40px;border-bottom:1px solid black;">Tuesday (2011-10-11)<tr><td class='cont_middle' colspan=8 width='500'>No GosuBets this day.<tr><td height=20 class='cont_middle_alt' align=right width=500 colspan=6 style="padding-left:40px;border-bottom:1px solid black;">Wednesday (2011-10-12)<tr><td class='cont_middle' colspan=8 width='500'>No GosuBets this day.</table>		<tr><td class=cont_top_alt><span class="nav_tree_current">Paging</span></td></tr>
+		<tr><td class="cont_middle">
+		<b>1</b>, <a href="gosubet/upcoming/10">2</a>&nbsp;<a href="gosubet/upcoming/10"><span align="right"><img src='/bilder/silk/arrow_right.png' title='' alt='' border=0 style='vertical-align: bottom'></a>				<tr><td class="cont_bottom">&nbsp;</table>
+
+				<br>
+				
+				
+			
+				
+		
+					
+				<table border="0"  width="500" cellpadding="0" cellspacing="0">
+				<tr><td class="cont_top">
+			
+					<a href="gosubet/">GosuBet</a> \ 
+					
+					<span class="nav_tree_current">
+						Recent results					</span>	
+					
+				</td><tr><td>     	
+						
+				<table cellspacing=0 cellpadding=3 class=multitable 0><tr class='cont_top_alt'><td title=""  class='cont_top_alt'><a href='/match.php?id=&order=antal_kom'>Com</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=p1'>Player 1</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=winner'>vs</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=p2'>Player 2</a></u> <td title=""  class='cont_top_alt'><a href='/match.php?id=&order=event_ref_id'>Event</a></u> 	<tr class="cont_middle" id="/gosubet/106923"
+	onmouseover='document.getElementById("/gosubet/106923").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106923").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106923'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+
+         						<td width="35" style="text-align:center;">(18)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Peru.gif" title="Peru" border=0 style='vertical-align: sub'>		         												<a href="gosubet/106923" style="text-decoration:none;">						
+		         				A51</A></B>
+		         				(-28)		         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/106923" style="text-decoration:none;">	
+		         				<								</A>
+		         				<td width="165">
+
+		         							<img src="/bilder/flags_long/United States.gif" title="United States" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106923" style="text-decoration:none;">
+		         				<b>		         				WF</A>
+		         				</b>
+		         				(+28)			<td width="80">
+		    » <a href="events/1473">GosuCup 4</a>     				
+				<tr class="cont_middle" id="/gosubet/107550"
+	onmouseover='document.getElementById("/gosubet/107550").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107550").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107550'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+
+         						<td width="35" style="text-align:center;">(42)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Malaysia.gif" title="Malaysia" border=0 style='vertical-align: sub'>		         				<b>								<a href="gosubet/107550" style="text-decoration:none;">						
+		         				Mufc</A></B>
+		         				(+13)		         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107550" style="text-decoration:none;">	
+		         				>								</A>
+		         				<td width="165">
+
+		         							<img src="/bilder/flags_long/Thailand.gif" title="Thailand" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107550" style="text-decoration:none;">
+		         						         				MiTH.Tr</A>
+		         				</b>
+		         				(-13)			<td width="80">
+		    » <a href="events/1495">ESTC '11</a>     				
+				<tr class="cont_middle" id="/gosubet/106912"
+	onmouseover='document.getElementById("/gosubet/106912").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/106912").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/106912'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+
+         						<td width="35" style="text-align:center;">(28)
+		         				<td width="165">
+
+								
+		         				<img src="/bilder/flags_long/Argentina.gif" title="Argentina" border=0 style='vertical-align: sub'>		         												<a href="gosubet/106912" style="text-decoration:none;">						
+		         				LOST.ar</A></B>
+		         				(-28)		         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/106912" style="text-decoration:none;">	
+		         				<								</A>
+		         				<td width="165">
+		         							<img src="/bilder/flags_long/United States.gif" title="United States" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/106912" style="text-decoration:none;">
+
+		         				<b>		         				WF</A>
+		         				</b>
+		         				(+28)			<td width="80">
+		    » <a href="events/1473">GosuCup 4</a>     				
+				<tr class="cont_middle" id="/gosubet/107417"
+	onmouseover='document.getElementById("/gosubet/107417").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107417").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107417'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+
+         						<td width="35" style="text-align:center;">(23)
+		         				<td width="165">
+
+								
+		         				<img src="/bilder/flags_long/Bulgaria.gif" title="Bulgaria" border=0 style='vertical-align: sub'>		         												<a href="gosubet/107417" style="text-decoration:none;">						
+		         				esG</A></B>
+		         						         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107417" style="text-decoration:none;">	
+		         				<>								</A>
+		         				<td width="165">
+		         							<img src="/bilder/flags_long/Serbia.gif" title="Serbia" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107417" style="text-decoration:none;">
+		         						         				Decerto</A>
+
+		         				</b>
+		         							<td width="80">
+		    » <a href="events/1458">RGL 3</a>     				
+				<tr class="cont_middle" id="/gosubet/107534"
+	onmouseover='document.getElementById("/gosubet/107534").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107534").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107534'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+
+         						<td width="35" style="text-align:center;">(33)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Ukraine.gif" title="Ukraine" border=0 style='vertical-align: sub'>		         												<a href="gosubet/107534" style="text-decoration:none;">						
+		         				XBOCT+4</A></B>
+
+		         				(-25)		         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107534" style="text-decoration:none;">	
+		         				<								</A>
+		         				<td width="165">
+		         							<img src="/bilder/flags_long/Denmark.gif" title="Denmark" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107534" style="text-decoration:none;">
+		         				<b>		         				monkey</A>
+		         				</b>
+
+		         				(+15)			<td width="80">
+		    » <a href="events/1465">ICS 9</a>     				
+				<tr class="cont_middle" id="/gosubet/107484"
+	onmouseover='document.getElementById("/gosubet/107484").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107484").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107484'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+
+         						<td width="35" style="text-align:center;">(70)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Ukraine.gif" title="Ukraine" border=0 style='vertical-align: sub'>		         				<b>								<a href="gosubet/107484" style="text-decoration:none;">						
+		         				DTS</A></B>
+
+		         				(+59)		         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107484" style="text-decoration:none;">	
+		         				>								</A>
+		         				<td width="165">
+		         							<img src="/bilder/flags_long/Russia.gif" title="Russia" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107484" style="text-decoration:none;">
+		         						         				M5</A>
+		         				</b>
+
+		         				(-36)			<td width="80">
+		    » <a href="events/1465">ICS 9</a>     				
+				<tr class="cont_middle" id="/gosubet/107533"
+	onmouseover='document.getElementById("/gosubet/107533").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107533").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107533'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+
+         						<td width="35" style="text-align:center;">(120)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Russia.gif" title="Russia" border=0 style='vertical-align: sub'>		         												<a href="gosubet/107533" style="text-decoration:none;">						
+		         				M5</A></B>
+		         				(-36)		         				<td style="text-align:center;" width="20">
+
+		         				<a href="gosubet/107533" style="text-decoration:none;">	
+		         				<								</A>
+		         				<td width="165">
+		         							<img src="/bilder/flags_long/Ukraine.gif" title="Ukraine" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107533" style="text-decoration:none;">
+		         				<b>		         				XBOCT+4</A>
+		         				</b>
+		         				(+59)			<td width="80">
+
+		    » <a href="events/1465">ICS 9</a>     				
+				<tr class="cont_middle" id="/gosubet/107482"
+	onmouseover='document.getElementById("/gosubet/107482").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107482").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107482'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+	
+
+         						<td width="35" style="text-align:center;">(11)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Sweden.gif" title="Sweden" border=0 style='vertical-align: sub'>		         												<a href="gosubet/107482" style="text-decoration:none;">						
+		         				EMC</A></B>
+		         				(-13)		         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107482" style="text-decoration:none;">	
+		         				<								</A>
+
+		         				<td width="165">
+		         							<img src="/bilder/flags_long/Denmark.gif" title="Denmark" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107482" style="text-decoration:none;">
+		         				<b>		         				monkey</A>
+		         				</b>
+		         				(+13)			<td width="80">
+		    » <a href="events/1465">ICS 9</a>     				
+				<tr class="cont_middle" id="/gosubet/107532"
+	onmouseover='document.getElementById("/gosubet/107532").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107532").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107532'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+
+         						<td width="35" style="text-align:center;">(45)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Ukraine.gif" title="Ukraine" border=0 style='vertical-align: sub'>		         												<a href="gosubet/107532" style="text-decoration:none;">						
+		         				DTS</A></B>
+		         				(-40)		         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107532" style="text-decoration:none;">	
+		         				<								</A>
+		         				<td width="165">
+
+		         							<img src="/bilder/flags_long/Ukraine.gif" title="Ukraine" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107532" style="text-decoration:none;">
+		         				<b>		         				XBOCT+4</A>
+		         				</b>
+		         				(+40)			<td width="80">
+		    » <a href="events/1465">ICS 9</a>     				
+				<tr class="cont_middle" id="/gosubet/107480"
+	onmouseover='document.getElementById("/gosubet/107480").className = "cont_middle_hover";'
+	onmouseout='document.getElementById("/gosubet/107480").className = "cont_middle";'
+	 
+			
+			onClick="window.location = 'gosubet/107480'"
+			
+				
+		style="cursor:pointer;text-decoration:none;"
+					    
+		
+	>
+
+	
+
+         						<td width="35" style="text-align:center;">(47)
+		         				<td width="165">
+								
+		         				<img src="/bilder/flags_long/Russia.gif" title="Russia" border=0 style='vertical-align: sub'>		         				<b>								<a href="gosubet/107480" style="text-decoration:none;">						
+		         				M5</A></B>
+		         				(+7)		         				<td style="text-align:center;" width="20">
+		         				<a href="gosubet/107480" style="text-decoration:none;">	
+		         				>								</A>
+		         				<td width="165">
+
+		         							<img src="/bilder/flags_long/Sweden.gif" title="Sweden" border=0 style='vertical-align: sub'>         							
+		         				 
+		         				<a href="gosubet/107480" style="text-decoration:none;">
+		         						         				EMC</A>
+		         				</b>
+		         				(-7)			<td width="80">
+		    » <a href="events/1465">ICS 9</a>     				
+			</table>		<tr><td class=cont_top_alt><span class="nav_tree_current">Paging</span></td></tr>
+
+		<tr><td class="cont_middle">
+		<b>1</b>, <a href="gosubet/results/10">2</a>, <a href="gosubet/results/20">3</a>...<a href="gosubet/results/6600">661</a>, <a href="gosubet/results/6610">662</a>, <a href="gosubet/results/6620">663</a>&nbsp;<a href="gosubet/results/10"><span align="right"><img src='/bilder/silk/arrow_right.png' title='' alt='' border=0 style='vertical-align: bottom'></a> <a href='javascript:void(0);' onClick="Effect.toggle('gotopageform', 'appear');"><img src='/bilder/silk/application_form_edit.png' title='Go to page by entering the number of the page you want to reach' alt='Go to page by entering the number of the page you want to reach' border=0 style='vertical-align: bottom'></a><form action='' method='post' style='display:none;padding-top:5px;margin:0;' id='gotopageform'> Go to page: <input type='text' name='page' size=4 onKeyUp="$('gotopageform').action = 'gosubet/results' + '/' + ((this.value  * 10) - 10);"><input type='submit' value='Go'></form>				<tr><td class="cont_bottom">&nbsp;</table>
+
+				<br>
+				
+				
+			
+			
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	<div id="footer">
+	
+
+<div class="main_box">
+
+	<div class="main_top">
+
+		&nbsp;
+
+	</div>
+
+	<div class="main_middle">
+
+		
+			 	<div id="footer_extremetracking">
+
+		        <a href="http://extremetracking.com/open?login=ggnet20"
+		        target="_top"> <img src="http://t1.extreme-dm.com/i.gif"
+		        name="EXim" border="0" height="38" width="41"
+		        alt="eXTReMe Tracker"></img></a>
+		        <script type="text/javascript" language="javascript1.2"><!--
+		        EXs=screen;EXw=EXs.width;navigator.appName!="Netscape"?
+		        EXb=EXs.colorDepth:EXb=EXs.pixelDepth;//-->
+		        </script><script type="text/javascript"><!--
+		        var EXlogin='ggnet20' // Login
+		        var EXvsrv='s9' // VServer
+		        navigator.javaEnabled()==1?EXjv="y":EXjv="n";
+		        EXd=document;EXw?"":EXw="na";EXb?"":EXb="na";
+		        EXd.write("<img src=http://e0.extreme-dm.com",
+		        "/"+EXvsrv+".g?login="+EXlogin+"&amp;",
+		        "jv="+EXjv+"&amp;j=y&amp;srw="+EXw+"&amp;srb="+EXb+"&amp;",
+		        "l="+escape(EXd.referrer)+" height=1 width=1>");//-->
+		        </script><noscript><img height="1" width="1" alt=""
+		        src="http://e0.extreme-dm.com/s9.g?login=ggnet20&amp;j=n&amp;jv=n"/>
+		        </noscript></center>
+
+			</div>
+
+
+		    <div id="footer_text">
+
+		    	© GosuGamers 2002-2010. Succession v4.1. Page generated in: 0.013s.
+
+		    </div>
+
+
+		    <div id="footer_links">
+		    	<a href="about/crew">About</a>
+		                &nbsp; <a href="http://sc.gosugamers.net/about/subscribe">Subscribe</a>
+
+		            &nbsp; <a href="about/workwithus">Work with us</a>
+		        &nbsp; <a href="about/support">Support</a>
+		        &nbsp; <a href="fact/5">Advertise</a>
+		       	&nbsp; <a href="fact/115">FAQ</a>
+                <div style="margin-top: 5px">
+
+                    <a href="http://www.adminor.net/">Our hosting company</a>
+                </div>
+		     </div>
+
+
+
+			<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+			</script>
+			<script type="text/javascript">
+			var pageTracker = _gat._getTracker("UA-341903-1");
+			pageTracker._initData();
+			pageTracker._trackPageview();
+			</script>
+
+		
+
+	</div>
+
+	<div class="main_bottom">
+
+		&nbsp;
+
+	</div>
+
+</div>
+
+
+	<script language="javascript">
+	setInterval("upclock()",1000);
+	</script>
+
+
+</div>
+</div>
+	<div id="last">
+
+	
+<div class="last_box" id="box_advertisement">
+ 
+    <div class="last_top">
+    		
+    	<h2>Advertisement</h2>
+
+	</div>
+
+    
+	<div class="last_middle">
+    
+		<center><!-- ca-pub-7300738326446560/Box -->
+<script type='text/javascript'>
+GA_googleFillSlot("Box");
+</script></center>    
+    </div>
+    
+    <div class="last_bottom">
+    
+    	&nbsp;
+    	
+    </div>
+    
+</div>
+		
+<div class="g300_box" id="box_top_gosubetters">
+
+	<div class="last_top">
+
+		<h2>Top GosuBetters</h2>
+
+	</div>
+
+	<div class="last_middle">
+
+		<table width="260" border="0" cellpadding="3" cellspacing="0" style="padding-left:10;">
+
+		
+				<tr><td>
+			#<b>1</b>
+				</td>
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 14583				</td>
+			   <td>  <img src="/bilder/flags_long/Greece.gif" title="Greece" border=0 style='vertical-align: sub'>				<td>» <a href="members/iLLuSi0NiSt.GRE">
+
+								iLLuSi0NiSt.GRE
+				</td>
+				</tr>
+			
+				<tr><td>
+			#<b>2</b>
+				</td>
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 11865				</td>
+
+			   <td>  <img src="/bilder/flags_long/Malaysia.gif" title="Malaysia" border=0 style='vertical-align: sub'>				<td>» <a href="members/Flameball">
+								Flameball
+				</td>
+				</tr>
+			
+				<tr><td>
+			#<b>3</b>
+				</td>
+
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 6000				</td>
+			   <td>  <img src="/bilder/flags_long/Philippines.gif" title="Philippines" border=0 style='vertical-align: sub'>				<td>» <a href="members/_iloveGG_">
+								_iloveGG_
+				</td>
+				</tr>
+			
+				<tr><td>
+
+			#<b>4</b>
+				</td>
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 4751				</td>
+			   <td>  <img src="/bilder/flags_long/Other.gif" title="Other" border=0 style='vertical-align: sub'>				<td>» <a href="members/RoNaMaN-">
+
+								RoNaMaN-
+				</td>
+				</tr>
+			
+				<tr><td>
+			#<b>5</b>
+				</td>
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 4269				</td>
+
+			   <td>  <img src="/bilder/flags_long/Romania.gif" title="Romania" border=0 style='vertical-align: sub'>				<td>» <a href="members/eminescu">
+								eminescu
+				</td>
+				</tr>
+			
+				<tr><td>
+			#<b>6</b>
+				</td>
+
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 2795				</td>
+			   <td>  <img src="/bilder/flags_long/Vietnam.gif" title="Vietnam" border=0 style='vertical-align: sub'>				<td>» <a href="members/voz.minmin">
+								voz.minmin
+				</td>
+				</tr>
+			
+				<tr><td>
+
+			#<b>7</b>
+				</td>
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 2762				</td>
+			   <td>  <img src="/bilder/flags_long/Philippines.gif" title="Philippines" border=0 style='vertical-align: sub'>				<td>» <a href="members/(D)">
+
+								(D)
+				</td>
+				</tr>
+			
+				<tr><td>
+			#<b>8</b>
+				</td>
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 2760				</td>
+
+			   <td>  <img src="/bilder/flags_long/Philippines.gif" title="Philippines" border=0 style='vertical-align: sub'>				<td>» <a href="members/jabs18">
+								jabs18
+				</td>
+				</tr>
+			
+				<tr><td>
+			#<b>9</b>
+				</td>
+
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 2700				</td>
+			   <td>  <img src="/bilder/flags_long/Poland.gif" title="Poland" border=0 style='vertical-align: sub'>				<td>» <a href="members/RhaZiel">
+								RhaZiel
+				</td>
+				</tr>
+			
+				<tr><td>
+
+			#<b>10</b>
+				</td>
+				<td>
+				<img src="/design/icons/tangos.gif" align="absmiddle"> 2700				</td>
+			   <td>  <img src="/bilder/flags_long/Indonesia.gif" title="Indonesia" border=0 style='vertical-align: sub'>				<td>» <a href="members/vantomane">
+
+								vantomane
+				</td>
+				</tr>
+			
+		</table>
+
+	</div>
+
+	<div class="last_bottom">
+
+		» <b><a href="gosubet/top">View all</a></b>
+
+	</div>
+
+</div>
+
+<div class="g300_box" id="box_gosubet_season_info">
+
+    <div class="last_top">
+    
+    	<h2>GosuBet information</h2>
+    	
+    </div>
+    	
+    <div class="last_top_alt">
+
+    
+    	Current season    	
+    </div>
+    
+	<div class="last_middle">
+	
+		<table width="250" border="0" cellpadding="5" cellspacing="0">
+		<tr><td>Name:<td>October 2011<tr><td>Lasts:<td>October 31<tr><td>Elapsed days: <td><font style="font-size:17px;font-weight:bold;">8</font>/31</td></tr>		</table>
+
+		
+	</div>
+	
+	<div class="last_top_alt">
+	
+		Season statistics		
+	</div> 
+	
+	<div class="last_middle">
+	    
+		<table width="250" border="0" cellpadding="5" cellspacing="0">
+		<tr><td>Total matches:<td>179<tr><td width=100>Total bets:<td>13479		<tr><td colspan=2><font style="font-size:10px;">The stats are counted from the start of the current season and are specific for each game's section.</font>					
+		</table>
+
+		
+	</div>
+	
+	<div class="last_bottom">
+	
+		&nbsp;
+		
+	</div>
+	
+</div>
+
+<div class="g300_box" id="box_what_is_gosubet">
+		
+	<div class="last_top">
+	
+		<h2>What is GosuBet?</h2>
+
+		
+	</div>
+	   
+	<div class="last_middle">
+	
+	
+		The GosuBet is a <i>non-money betting system</i>. 
+	    Everyone starts with 50 StarCraft minerals, 50 WarCraft gold and 50 DotA tangos and are able to put their minerals into many different bets, 
+	    with odds for each player. <br><br>
+
+	    Depending on the odds, members may win different amounts of minerals.
+	    Each season has either a time limit or a mineral goal, and once the season is over, 
+	    the winner is announced, and sometimes awarded a prize.
+		You must have membership on the site to be given 50 minerals/gold/tangos (depending on the section). 
+		Just click on a bet, select how much you'd like to bet, and on whom.
+		<br><br>If you ever lose your minerals/gold/tangos, just click 'Reset GosuBet' and you restart from 50.
+		<br><br>Are you the most gosu better? Prove it!
+		
+	</div>
+	 
+	<div class="last_bottom">
+
+	
+		&nbsp;
+		
+	</div>
+		
+</div>
+	</div>
+</div> <div id="extraDiv1"></div>
+<div id="extraDiv2"></div>
+<div id="extraDiv3"></div>
+<div id="extraDiv4"></div>
+</div> </body>
+</html>

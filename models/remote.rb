@@ -1,9 +1,13 @@
 require 'open-uri'
 require 'cgi'
+require 'nokogiri'
 
 class RemoteModel
   AttributeTypeMismatch = Class.new(StandardError)
   SiteArgumentMissing = Class.new(StandardError)
+  
+  attr_reader :fetched_at
+  attr_reader :fetched_from
   
   class << self
     attr_accessor :site, :element_xpath
@@ -65,13 +69,16 @@ class RemoteModel
     EOT
   end
 
-  def initialize(attributes = {})
+  def initialize(attributes = {}, fetched_from = nil, fetched_at = nil)
     attributes.each do |k, v|
       send("#{k}=", v)
     end
+    
+    @fetched_from = fetched_from
+    @fetched_at = fetched_at
   end
   
-  def initialize_with_element(e, from_site = nil)
+  def initialize_with_element(e)
   end
 
   def self.rename_argument(argument, new_name)
@@ -113,6 +120,7 @@ class RemoteModel
       args.delete(match[1..-1].to_sym) or raise SiteArgumentMissing, "you must specify #{match} for #{site}"
     end
     
+    date = DateTime.now
     query = args.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join('&') unless args.empty?
     contents  = open([url, query].compact.join('?')) { |f| f.read }
     content_sanitizers.each { |c| contents = c.call(contents) }
@@ -124,8 +132,8 @@ class RemoteModel
     return [] unless doc
     
     doc.xpath(element_xpath).map do |e|
-      model = self.new
-      model.initialize_with_element(e, url)
+      model = self.new({}, url, date)
+      model.initialize_with_element(e)
       model
     end
   end
