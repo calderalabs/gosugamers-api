@@ -1,12 +1,14 @@
 require 'open-uri'
 require 'cgi'
 require 'nokogiri'
+require 'synchronizable_on'
 
 class RemoteModel
+  include SynchronizableOn
+  
   AttributeTypeMismatch = Class.new(StandardError)
   SiteArgumentMissing = Class.new(StandardError)
   
-  attr_reader :fetched_at
   attr_reader :fetched_from
   
   class << self
@@ -68,14 +70,13 @@ class RemoteModel
       end
     EOT
   end
-
-  def initialize(attributes = {}, fetched_from = nil, fetched_at = nil)
+  
+  def initialize(attributes = {}, fetched_from = nil)
     attributes.each do |k, v|
       send("#{k}=", v)
     end
     
     @fetched_from = fetched_from
-    @fetched_at = fetched_at
   end
   
   def initialize_with_element(e)
@@ -132,7 +133,7 @@ class RemoteModel
     return [] unless doc
     
     doc.xpath(element_xpath).map do |e|
-      model = self.new({}, url, date)
+      model = self.new({}, url)
       model.initialize_with_element(e)
       model
     end
@@ -145,6 +146,6 @@ class RemoteModel
   end
   
   def to_json(*args)
-    self.attributes.to_json
+    self.attributes.to_json(*args)
   end
 end

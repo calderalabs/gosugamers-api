@@ -20,11 +20,11 @@ module Parse
       @args = args
     end
     
-    def execute!(&block)
+    def execute!
       raise ConfigurationError, "you must provide a master key" unless self.class.master_key
       raise ConfigurationError, "you must provide an application id" unless self.class.application_id
       
-      RestClient::Request.execute(
+      JSON.parse(RestClient::Request.execute(
         :method => @method,
         :url => "https://#{self.class.application_id}:#{self.class.master_key}@api.parse.com/1/#{@path}",
         :payload => @args.to_json,
@@ -32,9 +32,7 @@ module Parse
           :content_type => :json,
           :accept => :json
         }
-      ) do |response, request, result|
-        block.call(response.code, JSON.parse(response.body)) if block
-      end
+      ).body)
     end
   end
 end

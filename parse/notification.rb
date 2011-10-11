@@ -34,6 +34,8 @@ module Parse
           }
         )
       end
+      
+      self
     end
   end
 end

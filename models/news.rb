@@ -1,4 +1,8 @@
+require 'synchronizable_on'
+
 class News < RemoteModel
+  synchronizable_on :starcraft, :starcraft2, :warcraft, :dota, :dota2, :hon, :wow, :diablo, :poker
+  
   self.site = 'http://www.gosugamers.net/:game/news/archive'
   self.element_xpath = "//tr[starts-with(@id, 'news')]"
 
@@ -14,8 +18,8 @@ class News < RemoteModel
   
   sanitize_content do |content|
     content.
-    gsub(/<\/span>(.*?)<\?/m, "<\/span><\/td><\/tr><\?").
-    gsub(/<\? if\(\$_GET\['small_news'\] == '1'\)\{ \?>(.*?)<\?\} else \{\?>/m, "").
+    gsub(/<\/span>(?:.*?)<\?/m, "<\/span><\/td><\/tr><\?").
+    gsub(/<\? if\(\$_GET\['small_news'\] == '1'\)\{ \?>(?:.*?)<\?\} else \{\?>/m, "").
     gsub(/<\?.*\?>/, "")
   end
   

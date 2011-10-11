@@ -1,4 +1,6 @@
 class Replay < RemoteModel
+  synchronizable_on :starcraft, :starcraft2, :warcraft, :dota, :hon
+  
   self.site = 'http://www.gosugamers.net/:game/replays'
   self.element_xpath = "//tr[starts-with(@id, '/replays/')]"
 

@@ -38,7 +38,7 @@ describe Parse::Notification do
       }.to_json,
       
       :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
-    )
+    ).to_return(:body => { :success => true }.to_json)
     
     notification = Parse::Notification.new({
       :channels => 'news',
@@ -73,7 +73,7 @@ describe Parse::Notification do
         }.to_json,
       
         :headers => { 'Content-Type' => 'application/json', 'Accept' => 'application/json' }
-      )
+      ).to_return(:body => { :success => true }.to_json)
     end
     
     notification = Parse::Notification.new({

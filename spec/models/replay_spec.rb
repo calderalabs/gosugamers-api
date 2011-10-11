@@ -18,7 +18,10 @@ describe Replay do
     stub_request(:get, 'http://www.gosugamers.net/dota/replays').
     to_return(:body => File.new(File.join(File.dirname(__FILE__), '..', 'data', 'replays.html')))
     
-    replay = Replay.find(:game => 'dota').first
+    replays = Replay.find(:game => 'dota')
+    replays.count.should == 100
+    
+    replay = replays.first
     replay.id.should == 51634
     replay.game.should == 'dota'
     replay.date.should == Date.parse('2011-10-10')

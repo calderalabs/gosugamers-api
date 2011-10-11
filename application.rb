@@ -5,7 +5,7 @@ require 'sinatra/base'
 
 require 'models/remote'
 require 'routes/news'
-require 'routes/bets'
+require 'routes/matches'
 require 'routes/replays'
 require 'parse'
 require 'json'

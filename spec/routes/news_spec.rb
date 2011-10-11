@@ -9,18 +9,20 @@ describe 'News routes' do
   end
   
   it "should return the list of news" do   
-    stub_request(:get, 'http://www.gosugamers.net/dota/news/archive').
-    to_return(:body => open(File.join(File.dirname(__FILE__), '..', 'data', 'news.html')) { |f| f.read })
+    stub_request(:get, 'http://www.gosugamers.net/dota/news/archive?start=0').
+    to_return(:body => File.new(File.join(File.dirname(__FILE__), '..', 'data', 'news.html')))
     
     get '/news?game=dota'
     
     last_response.should be_ok
-    news = JSON.parse(last_response.body).first
-
-    news['game'].should == 'dota'
-    news['title'].should == 'Interview with pinksheep* from PMS Asterisk'
-    news['link'].should == 'http://www.gosugamers.net/news/17121-interview-with-pinksheep-from-pms-asterisk'
-    news['comment_count'].should == 12
-    news['created_at'].should == DateTime.parse('2011-10-02 07:20:51 CET').to_s
+    news = JSON.parse(last_response.body)
+    news.count.should == 25
+    
+    first_news = news.first
+    first_news['game'].should == 'dota'
+    first_news['title'].should == 'Interview with pinksheep* from PMS Asterisk'
+    first_news['link'].should == 'http://www.gosugamers.net/news/17121-interview-with-pinksheep-from-pms-asterisk'
+    first_news['comment_count'].should == 12
+    first_news['created_at'].should == DateTime.parse('2011-10-02 07:20:51 CET').to_s
   end
 end
