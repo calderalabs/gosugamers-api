@@ -20,10 +20,8 @@ module SynchronizableSpec
   class Synchronized
     include Synchronizable
   
-    def self.create(id)
-      s = new
-      s.id = id
-      s
+    def initialize(id)
+      self.id = id
     end
   
     attr_accessor :id
@@ -32,11 +30,11 @@ module SynchronizableSpec
     def self.find(args = {})
       case args[:game]
       when :some
-        [create(3), create(2), create(1)]
+        [new(3), new(2), new(1)]
       when :example
-        [create(6), create(5), create(4)]
+        [new(6), new(5), new(4)]
       when :game
-        [create(9), create(8), create(7)]
+        [new(9), new(8), new(7)]
       end
     end
   
