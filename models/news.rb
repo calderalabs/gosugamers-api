@@ -1,5 +1,3 @@
-require 'synchronizable_on'
-
 class News < RemoteModel
   synchronizable_on :starcraft, :starcraft2, :warcraft, :dota, :dota2, :hon, :wow, :diablo, :poker
   

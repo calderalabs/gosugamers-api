@@ -1,10 +1,10 @@
 require 'open-uri'
 require 'cgi'
 require 'nokogiri'
-require 'synchronizable_on'
+require 'synchronizable'
 
 class RemoteModel
-  include SynchronizableOn
+  include Synchronizable
   
   AttributeTypeMismatch = Class.new(StandardError)
   SiteArgumentMissing = Class.new(StandardError)
