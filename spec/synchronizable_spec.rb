@@ -38,6 +38,10 @@ module SynchronizableSpec
       end
     end
   
+    def self.name
+      'Synchronized'
+    end
+  
     def to_notification
       SynchronizableSpec::Notification.new(id)
     end
@@ -52,18 +56,18 @@ describe Synchronizable do
     SynchronizableSpec::Notification.should_not_receive(:push!)
     SynchronizableSpec::Synchronized.synchronize!
     
-    JSON.parse($redis.get('last_synchronizablespec::synchronized_some'))['id'].should == 3
-    JSON.parse($redis.get('last_synchronizablespec::synchronized_example'))['id'].should == 6
-    JSON.parse($redis.get('last_synchronizablespec::synchronized_game'))['id'].should == 9
+    JSON.parse($redis.get('last_synchronized_some'))['id'].should == 3
+    JSON.parse($redis.get('last_synchronized_example'))['id'].should == 6
+    JSON.parse($redis.get('last_synchronized_game'))['id'].should == 9
   end
   
   it "should push notifications for new items" do
     Parse::Request.stub!(:application_id).and_return('application_id')
     Parse::Request.stub!(:master_key).and_return('master_key')
     
-    $redis.set('last_synchronizablespec::synchronized_some', { :id => 2 }.to_json)
-    $redis.set('last_synchronizablespec::synchronized_example', { :id => 5 }.to_json)
-    $redis.set('last_synchronizablespec::synchronized_game', { :id => 9 }.to_json)
+    $redis.set('last_synchronized_some', { :id => 2 }.to_json)
+    $redis.set('last_synchronized_example', { :id => 5 }.to_json)
+    $redis.set('last_synchronized_game', { :id => 9 }.to_json)
     
     SynchronizableSpec::Notification.should_receive(:push!).with(3)
     SynchronizableSpec::Notification.should_receive(:push!).with(6)

@@ -121,7 +121,6 @@ class RemoteModel
       args.delete(match[1..-1].to_sym) or raise SiteArgumentMissing, "you must specify #{match} for #{site}"
     end
     
-    date = DateTime.now
     query = args.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join('&') unless args.empty?
     contents  = open([url, query].compact.join('?')) { |f| f.read }
     content_sanitizers.each { |c| contents = c.call(contents) }
