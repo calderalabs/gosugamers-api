@@ -1,5 +1,3 @@
-require 'redis'
-
 module Synchronizable
   def self.included(base)
     base.extend ClassMethods
@@ -14,8 +12,6 @@ module Synchronizable
   
   module SingletonMethods
     def synchronize!
-      redis = Redis.new
-
       @games.each do |game|
         key = "last_#{name.downcase}_#{game}"
         last_obj_s = $redis.get(key)

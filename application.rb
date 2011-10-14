@@ -10,6 +10,7 @@ require 'routes/replays'
 require 'parse'
 require 'json'
 require 'yaml'
+require 'redis'
 
 module Application
   def self.initialize!
