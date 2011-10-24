@@ -14,13 +14,15 @@ require 'redis'
 
 module Application
   def self.initialize!
+    parse = YAML::load(File.open(File.join(root, 'config', 'parse.yml')))
+    
     Parse::Configuration.configure do |config|
-      config.application_id = 'KT03lBl47kQ7mFcFu2A7OsVddHcxAwLroITBP6MM'
-      config.master_key = 'YHRqssmllNOqCLFXU5ePyBirKspBsDArdo3olpV3'
+      config.application_id = parse[:application_id]
+      config.master_key = parse[:master_key]
     end
     
-    config = YAML::load(File.open(File.join(root, 'config', 'redis.yml')))
-    $redis = Redis.new(config[environment])
+    redis = YAML::load(File.open(File.join(root, 'config', 'redis.yml')))
+    $redis = Redis.new(redis[environment])
   end
   
   def self.root

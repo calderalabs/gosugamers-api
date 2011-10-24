@@ -16,7 +16,7 @@ module Synchronizable
         key = "last_#{name.downcase}_#{game}"
         last_obj_s = $redis.get(key)
         objects = find(:page => 1, :game => game)
-        $redis.set(key, { :id => objects.max{ |a, b| a.id <=> b.id }.id }.to_json)
+        $redis.set(key, { :id => objects.empty? ? 0 : objects.max { |a, b| a.id <=> b.id }.id }.to_json)
         next unless last_obj_s
         last_obj = JSON.parse(last_obj_s)
         objects.keep_if { |o| o.id > last_obj['id'] }.each { |o| o.to_notification.push! }

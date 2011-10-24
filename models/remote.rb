@@ -124,7 +124,6 @@ class RemoteModel
     query = args.map { |k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join('&') unless args.empty?
     contents  = open([url, query].compact.join('?')) { |f| f.read }
     content_sanitizers.each { |c| contents = c.call(contents) }
-    
     doc = Nokogiri::HTML(contents) do |config|
       config.noerror
     end
