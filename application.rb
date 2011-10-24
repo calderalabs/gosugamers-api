@@ -15,10 +15,10 @@ require 'redis'
 module Application
   def self.initialize!
     parse = YAML::load(File.open(File.join(root, 'config', 'parse.yml')))
-    
+
     Parse::Configuration.configure do |config|
-      config.application_id = parse[:application_id]
-      config.master_key = parse[:master_key]
+      config.application_id = parse['application_id']
+      config.master_key = parse['master_key']
     end
     
     redis = YAML::load(File.open(File.join(root, 'config', 'redis.yml')))
