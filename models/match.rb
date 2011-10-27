@@ -28,7 +28,7 @@ class Match < RemoteModel
   
   def to_notification
     Parse::Notification.new(
-      :channels => [player_one, player_two],
+      :channels => "#{game}_matches",
       :alert => "#{player_one} vs #{player_two} in #{eta} (CET)",
       :badge => 1,
       :custom_data => { :url => link }

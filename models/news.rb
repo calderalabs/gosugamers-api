@@ -36,7 +36,7 @@ class News < RemoteModel
   
   def to_notification
     Parse::Notification.new(
-      :channels => game,
+      :channels => "#{game}_news",
       :alert => title,
       :badge => 1,
       :custom_data => { :url => link }

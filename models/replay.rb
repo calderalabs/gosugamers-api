@@ -40,7 +40,7 @@ class Replay < RemoteModel
   
   def to_notification
     Parse::Notification.new(
-      :channels => [player_one, player_two],
+      :channels => "#{game}_replays",
       :alert => "#{player_one} vs #{player_two} (Event: #{event}) is out!",
       :badge => 1,
       :custom_data => { :url => link }
