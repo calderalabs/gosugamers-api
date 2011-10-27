@@ -1,7 +1,7 @@
 class News < RemoteModel
   synchronizable_on :starcraft, :starcraft2, :warcraft, :dota, :dota2, :hon, :wow, :diablo, :poker
   
-  self.site = 'http://www.gosugamers.net/:game/news/archive'
+  self.site = 'http://www.gosugamers.net/:game/news.php'
   self.element_xpath = "//tr[starts-with(@id, 'news')]"
 
   field :id, Integer
@@ -13,6 +13,7 @@ class News < RemoteModel
 
   replace_argument(:page, :start) { |p| ([p, 1].max - 1) * 25 }
   default_argument(:game, 'general')
+  default_argument(:i, 'archive')
   
   sanitize_content do |content|
     content.
