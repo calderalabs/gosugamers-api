@@ -12,18 +12,19 @@ require 'json'
 require 'yaml'
 require 'redis'
 require 'erb'
+require 'additions/hash'
 
 module Application
   def self.initialize!
-    parse = YAML::load(ERB.new(File.read(File.join(root, 'config', 'parse.yml'))).result)
+    parse = YAML::load(ERB.new(File.read(File.join(root, 'config', 'parse.yml'))).result).symbolize_keys
 
     Parse::Configuration.configure do |config|
-      config.application_id = parse['application_id']
-      config.master_key = parse['master_key']
+      config.application_id = parse[:application_id]
+      config.master_key = parse[:master_key]
     end
     
     redis = YAML::load(ERB.new(File.read(File.join(root, 'config', 'redis.yml'))).result)
-    $redis = Redis.new(redis[environment])
+    $redis = Redis.new(redis[environment].symbolize_keys)
   end
   
   def self.root
