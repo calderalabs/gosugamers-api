@@ -7,3 +7,13 @@ test:
   host: localhost
   port: 6379
   db: 1
+  
+<% if ENV['REDISTOGO_URL'] %>
+<% url = URI.parse(ENV['REDISTOGO_URL']) %>
+production:
+  host: <%= url.host %>
+  port: <%= url.port %>
+  user: <%= url.user %>
+  password: <%= url.password %>
+  db: 1
+<% end %>

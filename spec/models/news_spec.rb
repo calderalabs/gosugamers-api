@@ -9,7 +9,7 @@ describe News do
   it { should have_field(:created_at).of_type(DateTime) }
   
   it 'should find the news from the example data' do   
-    stub_request(:get, 'http://www.gosugamers.net/dota/news/archive').
+    stub_request(:get, 'http://www.gosugamers.net/dota/news.php?i=archive').
     to_return(:body => File.new(File.join(File.dirname(__FILE__), '..', 'data', 'news.html')))
     
     news = News.find(:game => 'dota')

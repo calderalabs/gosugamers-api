@@ -1,7 +1,7 @@
 class Match < RemoteModel
   synchronizable_on :starcraft, :starcraft2, :warcraft, :dota, :hon
   
-  self.site = 'http://www.gosugamers.net/:game/gosubet'
+  self.site = 'http://www.gosugamers.net/:game/gosubet/upcoming/:start'
   self.element_xpath = "//span[contains(text(), 'Upcoming matches')]/following::table[1]/tr[starts-with(@id, '/gosubet/')]"
 
   field :id, Integer
@@ -14,6 +14,7 @@ class Match < RemoteModel
   field :bet_count, Integer
   
   replace_argument(:page, :start) { |p| ([p, 1].max - 1) * 25 }
+  default_argument(:page, 0)
   
   def initialize_with_element(e)
     self.id = e['id'].gsub('/gosubet/', '').to_i

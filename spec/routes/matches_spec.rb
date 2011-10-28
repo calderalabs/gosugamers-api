@@ -9,24 +9,24 @@ describe 'Matches routes' do
   end
   
   it "should return the list of matches" do   
-    stub_request(:get, 'http://www.gosugamers.net/dota/gosubet?start=0').
+    stub_request(:get, 'http://www.gosugamers.net/starcraft2/gosubet/upcoming/0').
     to_return(:body => File.new(File.join(File.dirname(__FILE__), '..', 'data', 'matches.html')))
     
-    get '/matches?game=dota'
+    get '/matches?game=starcraft2'
 
     last_response.should be_ok
     
     matches = JSON.parse(last_response.body)
-    matches.count.should == 13
+    matches.count.should == 32
     
     match = matches.first
-    match['id'].should == 107580
-    match['game'].should == 'dota'
-    match['eta'].should == '1h 51m'
-    match['player_one'].should == 'XBOCT+4'
-    match['player_two'].should == 'monkey'
-    match['link'].should == 'http://www.gosugamers.net/gosubet/107580'
-    match['comment_count'].should == 12
-    match['bet_count'].should == 170
+    match['id'].should == 108450
+    match['game'].should == 'starcraft2'
+    match['eta'].should == '10h 30m'
+    match['player_one'].should == 'HwangSin'
+    match['player_two'].should == 'Jinro'
+    match['link'].should == 'http://www.gosugamers.net/gosubet/108450'
+    match['comment_count'].should == 0
+    match['bet_count'].should == 23
   end
 end

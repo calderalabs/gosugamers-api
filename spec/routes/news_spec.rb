@@ -9,7 +9,7 @@ describe 'News routes' do
   end
   
   it "should return the list of news" do   
-    stub_request(:get, 'http://www.gosugamers.net/dota/news/archive?start=0').
+    stub_request(:get, 'http://www.gosugamers.net/dota/news.php?i=archive&start=0').
     to_return(:body => File.new(File.join(File.dirname(__FILE__), '..', 'data', 'news.html')))
     
     get '/news?game=dota'
