@@ -1,6 +1,0 @@
-synchronize:
-  every: 10m
-  class: Synchronize
-  queue: high
-  args: 
-  description: "This job synchronizes data from GosuGamers and pushes notifications"
