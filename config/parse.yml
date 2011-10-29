@@ -1,2 +1,11 @@
-application_id: YOUR_APPLICATION_ID
-master_key: YOUR_MASTER_KEY
+development:
+    application_id: YOUR_APPLICATION_ID
+    master_key: YOUR_MASTER_KEY
+
+test:
+    application_id: YOUR_APPLICATION_ID
+    master_key: YOUR_MASTER_KEY
+
+production:
+    application_id: YOUR_APPLICATION_ID
+    master_key: YOUR_MASTER_KEY
